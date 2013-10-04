@@ -13,6 +13,8 @@ module.exports = {
 
       var $datepicker = this.$form.find('input.datepicker');
 
+      this._getField($datepicker).find(this.opts.error).addClass('hidden');
+
       // Always show datepicker below the input
       if (jQuery.ui) {
         $.datepicker._checkOffset = function(a,b,c){ return b };

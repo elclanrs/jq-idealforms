@@ -23,7 +23,7 @@ module.exports = {
 
       this._updateSteps();
 
-      if ($.idealforms.hasExtension('idealAjax')) {
+      if (this._hasExtension('ajax')) {
         $.each($.idealforms._requests, function(key, request) {
           request.done(function(){ self._updateSteps() });
         });

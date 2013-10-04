@@ -1,13 +1,23 @@
-![Ideal Forms logo](http://i.imgur.com/F9erFXl.png)
+![Ideal Forms logo](http://i.imgur.com/wg9htKk.png)
 
 The best forms just got better! Ideal Forms 3 is smaller, faster, and more extensible.
 
-**Support:** IE9+ and all modern browsers.  
-**Demo:**
+**License:** GPL or MIT  
+**Support:** IE9+ and all modern browsers  
+**Demo:** http://cedricruiz.me/idealforms3
+
+### Features
+- On the spot validation
+- Fully adaptive (adapts to the container, no css media queries needed)
+- Keyboard support
+- Custom checkboxes, radios and file inputs
+- Custom seamless jQuery UI datepicker
+- Support for third party extensions
+- Localization (todo)
 
 ### Major changes since version 2
 
-Ideal Forms 3 is **not** compatible with version 2. Here's what's new:
+Ideal Forms 3 is **not** compatible with version 2. You can still find Ideal Forms 2 under [jq-idealforms-old](https://github.com/elclanrs/jq-idealforms-old), but support has been dropped. Here's what's new in version 3:
 
 - New architecture, more modularity
 - Custom markup
@@ -18,6 +28,10 @@ Ideal Forms 3 is **not** compatible with version 2. Here's what's new:
 - Drop custom select menu
 - Drop support for IE8
 
+### TODO
+
+- i18n
+
 ## Table of Contents
 
 - [Setup](#setup)
@@ -25,24 +39,29 @@ Ideal Forms 3 is **not** compatible with version 2. Here's what's new:
 - [Markup](#markup)
     - [Custom Markup](#custom-markup)
 - [Adding Rules](#adding-rules)
+    - [Custom Errors](#custom-errors)
 - [Built-in Rules](#built-in-rules)
 - [Methods](#methods)
 - [Built-in Extensions](#built-in-extensions)
     - [Dynamic Fields](#extension-dynamic-fields)
-    - [Steps](#extension:-steps)
+    - [Steps](#extension-steps)
     - [Custom Inputs](#extension-custom-inputs)
     - [Ajax](#extension-ajax)
     - [Datepicker](#extension-datepicker)
+    - [Adaptive](#extension-adaptive)
 - [Custom Rules](#custom-rules)
 - [Custom Extensions](#custom-extensions)
 - [Themes](#themes)
+- [FAQ](#faq)
 - [Build & Share](#build--share)
+- [Update History](#update-history)
 
 ## Setup
 
 - Load latest [jQuery](http://code.jquery.com/jquery-2.0.3.min.js) library
 - Load `css/jquery.idealforms.css` stylesheet
 - Load `js/out/jquery.idealforms.min.js` plugin
+- Place images in a folder and make sure the [path is correct](#why-the-icons-dont-show-up)
 - For better IE support, replace the opening `html` tag with:
 
 ```html
@@ -69,7 +88,8 @@ defaults = {
   silentLoad: true,
   onValidate: $.noop,
   onSubmit: $.noop,
-  rules: {}
+  rules: {},
+  errors: {}
 }
 ```
 
@@ -116,6 +136,15 @@ Callback that runs when the form is submitted.
 - **invalid:** The number of invalid fields if any.
 - **event:** The submit event (prevented by default).
 
+### rules
+
+Field rules. See [Adding Rules](#adding-rules).
+
+### errors
+
+User defined errors for added rules. See [Custom Errors](#custom-errors).
+
+
 ## Markup
 
 You can get started quickly using Ideal Forms' default markup: 
@@ -161,7 +190,7 @@ You can get started quickly using Ideal Forms' default markup:
   <!-- Select -->
   <div class="field">
     <label class="main">Options:</label>
-    <select name="options" id="">
+    <select name="options">
       <option value="default">&ndash; Select an option &ndash;</option>
       <option value="1">One</option>
       <option value="2">Two</option>
@@ -226,6 +255,29 @@ $('form').idealforms('addRules', {
 });
 ```
 
+### Custom Errors
+
+To display your own custom errors for the rules you added pass the names and a list of errors for each field:
+
+```javascript
+$('form').idealforms({
+  
+  rules: {
+    ...
+  },
+  
+  errors: {
+    'username': {
+      required: 'Please enter a username',
+      username: 'This username is not valid, try again'
+    },
+    'password': {
+      password: 'Please enter a secure password'
+    }
+  }
+});
+```
+
 ## Built-in Rules
 
 A rule must be in this format `rule:param` where `rule` is the name of the `rule` and `param` is a rule parameter, for example `minmax:10:50` will use the `minmax` rule with two arguments, `10` and `50`.
@@ -273,11 +325,11 @@ Focus the first invalid field.
 
 ### .idealforms('is:valid', name)
 
-Check if the input with `name` attribute is valid.
+If you pass a `name` it will check if that input is valid, otherwise it will check if all inputs are valid.
 
-### .idealforms('reset')
+### .idealforms('reset', name)
 
-Reset all onputs to zero. That means emptying all the values of text inputs, unchecking all checkboxes and radios, and reverting selects to their default option.
+If you pass a `name` it will reset that single input, if you don't it will reset all inputs to zero. That means emptying all the values of text inputs, unchecking all checkboxes and radios, and reverting selects to their default option.
 
 ## Built-in Extensions
 
@@ -292,6 +344,8 @@ $('form').idealforms({
 ```
 
 ### Extension: Dynamic Fields
+
+**Name:** `dynamicFields`
 
 Dynamic Fields extends core with the following methods:
 
@@ -375,7 +429,7 @@ The HTML is generated according to built-in templates. If you're using your own 
 ```
 
 ```javascript
-$('form').idealforms('templates', {
+$('form').idealforms({
 
   templates: {
     base: '...',
@@ -390,7 +444,7 @@ $('form').idealforms('templates', {
 
 The templating rules are:
 
-- **{var}:** A variable or property.
+- **{var}:** A variable.
 - **{@list} html {/list}:** A loop.
 - **{#var}:** A loop variable (inside the loop).
 
@@ -418,7 +472,11 @@ Show or hide fields. When the fields are hidden they will be excluded from the v
 $('form').idealforms('toggleFields', 'username password hobbies[]');
 ```
 
+Dynamic Fields adds injection points for `addFields`, `removeFields` and `toggleFields`. Read about [custom extensions](#custom-extensions) for more info.
+
 ### Extension: Steps  
+
+**Name:** `steps`
 
 Steps let you organize your form in sections. Steps expects a container, navigation, wrapper, and at least one step. Using the default  options you may build your form like so:
 
@@ -504,18 +562,25 @@ This extension has no additional options or methods.
 
 ### Extension: Ajax
 
+**Name:** `ajax`
+
 Adds an `ajax` rule. First specify a URL on your input:
 
 ```html
 <input type="text" name="username" data-idealforms-ajax="test-username.php"/>
 ```
 
-Then add the rule to the field _always_ at last.
+Then add the rule to the field _always_ at last and add an error to handle an invalid response:
 
 ```javascript
 $('form').idealforms({
   rules: {
     'username': 'required username ajax'
+  },
+  errors: {
+    'username': {
+      ajaxError: 'Username not available'
+    }
   }
 });
 ```
@@ -530,6 +595,8 @@ echo json_encode(true);
 If the response gets delayed the field will switch into "ajax mode" by showing a loading icon until the response comes back.
 
 ### Extension: Datepicker
+
+**Name:** `datepicker`
 
 Adds a datepicker to date inputs. You must include [jQuery UI](http://jqueryui.com/) first, then add the class `datepicker` to your date inputs:
 
@@ -557,6 +624,19 @@ $('form').idealforms({
 });
 
 $('.datepicker').datepicker('option', 'dateFormat', 'yy-mm-dd');
+```
+### Extension: Adaptive
+
+**Name:** `adaptive`
+
+Adapts the form to the container when resizing the browser allowing it to work with any responsive grid system. Ideal Forms will add the class `adaptive` to the form and Steps navigation (if present) so you can add your own styles if you decide to use custom markup.
+
+Ideal Forms calculates the adaptive width at which the change of layout occurs. If you use custom markup and styles make sure to set the `adaptiveWidth` plugin option using the formula:
+
+```javascript
+$('form').idealforms({
+  adaptiveWidth: 600 // the total width of a field (label + input + icon + error)
+});
 ```
 
 ## Custom Rules
@@ -589,13 +669,24 @@ If the rule is a function that takes rule parameters pass the parameters as `{0}
 
 ## Custom Extensions
 
+To add a custom extension provide a `name`, extended `options` and extended `methods` if any. You can inject code into the following built-in methods:
+
+- **_init:** Runs when the plugin is initialized, but before any initial input rules are added.
+- **_buildField(input):** Builds the input given the markup options to work with Ideal Forms. `input` is the current input element being built.
+- **_validate(input, rule, valid):** Runs right after the input has been validated. `input` is the input element, `rule` is the rule that tried to pass validation and `valid` is a boolean flag.
+- **addRules:** It gets invoked on `_init` to add the initial rules and whenever you add more rules to the form.
+- **focusFirstInvalid:** Inject code when the first input is focused.
+- **reset(name):** Reset the form. `name` is an input name, if any. Check the [reset](#idealformsreset-name) method.
+
+It is recommended that you always namespae your extension, by prefixing it with a unique identifier:
+
 ```javascript
 $.idealforms.addExtension({
 
   name: 'extensionName',
   
   options: {
-    option: 'default'  
+    MY_option: 'default'  
   },
   
   methods: {
@@ -605,14 +696,49 @@ $.idealforms.addExtension({
     
     },
     
-    newMethod: function() {
+    MY_newMethod: function() {
     
     }
   }
 });
 ```
 
+If an extension depends on another extension you may use `_hasExtension`:
+
+```javascript
+_init: function() {  
+  if (this._hasExtension('ajax')) {
+    ...
+  }
+}
+```
+
 ## Themes
+
+Ideal Forms 3 themes are built with [Stylus](http://learnboost.github.io/stylus/). To create your own theme to use with the default markup open `styl/vars.stly`, modify what you need and [compile](#build--share).
+
+```sass
+valid = #3F9DCC // valid font color
+valid-bg = #EDF7FC // valid background color
+invalid = #CC2A18 // invalid font color
+invalid-bg = #FFEDED // invalid background color
+ajax = #CFAA19 // ajax font color
+ajax-bg = #FAF9E8 // ajax background color
+ui-element = #ddd // buttons, select and steps backgruond color
+error = #285d85 // error background color
+
+label-width = 120px // main labels width
+input-width = 290px // input width applies to all fields
+error-width = (input-width/1.5)
+radius = 3px // border-radius
+
+icon = true // disable icons (must disable in plugin options too)
+icon-size = 16px // must be square icon
+icon-padding = 8px // padding between icon, input and error
+
+group-horizontal = false // group checkbox and radio horizontally
+
+```
 
 ## FAQ
 
@@ -630,6 +756,20 @@ Now you an use methods like so:
 instance.reset(); // reset the form
 ```
 
+### Why the icons don't show up
+
+Ideal Forms assumes that your site has this common structure:
+
+```
+site
+  + css
+  + img
+  + js
+    index.html
+```
+
+When you download Ideal Forms, make sure to place the images inside `img`. If your folder structure is different you have to open `css/jquery.idealforms.css` and search and replace `../img/` with the correct path to your images folder relative to the plugin.
+
 ## Build & Share
 
 Ideal Forms 3 is built using some popular NodeJS tools. This is what you'll need to install globally:
@@ -644,4 +784,11 @@ Finally run `watch -c sh compile.sh` to watch for changes and compile. Now you'r
 
 If you want to test ajax make sure to run it on your localhost.
 
-**Enjoy ;)**
+This instructions have only been tested on Ubuntu, but you should be able to compile on any Unix system. Some Windows terminal emulators don't provide the `watch` command, but you can still run the script normally with bash `sh compile.sh`.
+
+**Enjoy** ![smiley](http://www.4smileys.com/smileys/happy-smileys/happy-smiley11.gif)
+
+## Update History
+
+#### 05/10/13
+- Adaptive extension brings back responsive theme.

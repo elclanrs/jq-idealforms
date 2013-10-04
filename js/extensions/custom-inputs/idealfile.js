@@ -11,85 +11,85 @@
   plugin.name = 'idealfile';
 
   plugin.methods = {
-  
-      _init: function() {
 
-        var $file = $(this.el).addClass('ideal-file') // the original file input
-          , $wrap = $('<div class="ideal-file-wrap">')
-          , $input = $('<input type="text" class="ideal-file-filename" />')
-            // Button that will be used in non-IE browsers
-          , $button = $('<button type="button" class="ideal-file-upload">Open</button>')
-            // Hack for IE
-          , $label = $('<label class="ideal-file-upload" for="' + $file[0].id + '">Open</label>');
+    _init: function() {
 
-        // Hide by shifting to the left so we
-        // can still trigger events
-        $file.css({
-          position: 'absolute',
-          left: '-9999px'
-        });
+      var $file = $(this.el).addClass('ideal-file') // the original file input
+        , $wrap = $('<div class="ideal-file-wrap">')
+        , $input = $('<input type="text" class="ideal-file-filename" />')
+          // Button that will be used in non-IE browsers
+        , $button = $('<button type="button" class="ideal-file-upload">Open</button>')
+          // Hack for IE
+        , $label = $('<label class="ideal-file-upload" for="' + $file[0].id + '">Open</label>');
 
-        $wrap.append($input, (isIE ? $label : $button)).insertAfter($file);
+      // Hide by shifting to the left so we
+      // can still trigger events
+      $file.css({
+        position: 'absolute',
+        left: '-9999px'
+      });
 
-        // Prevent focus
-        $file.attr('tabIndex', -1);
-        $button.attr('tabIndex', -1);
+      $wrap.append($input, (isIE ? $label : $button)).insertAfter($file);
 
-        $button.click(function () {
-          $file.focus().click(); // Open dialog
-        });
+      // Prevent focus
+      $file.attr('tabIndex', -1);
+      $button.attr('tabIndex', -1);
 
-        $file.change(function () {
+      $button.click(function () {
+        $file.focus().click(); // Open dialog
+      });
 
-          var files = []
-            , fileArr, filename;
+      $file.change(function () {
 
-            // If multiple is supported then extract
-            // all filenames from the file array
-          if (multipleSupport) {
-            fileArr = $file[0].files;
-            for (var i = 0, len = fileArr.length; i < len; i++) {
-              files.push(fileArr[i].name);
-            }
-            filename = files.join(', ');
+        var files = []
+          , fileArr, filename;
 
-            // If not supported then just take the value
-            // and remove the path to just show the filename
-          } else {
-            filename = $file.val().split('\\').pop();
+          // If multiple is supported then extract
+          // all filenames from the file array
+        if (multipleSupport) {
+          fileArr = $file[0].files;
+          for (var i = 0, len = fileArr.length; i < len; i++) {
+            files.push(fileArr[i].name);
           }
+          filename = files.join(', ');
 
-          $input .val(filename).attr('title', filename);
+          // If not supported then just take the value
+          // and remove the path to just show the filename
+        } else {
+          filename = $file.val().split('\\').pop();
+        }
 
-        });
+        $input .val(filename).attr('title', filename);
 
-        $input.on({
-          blur: function () {
-            $file.trigger('blur');
-          },
-          keydown: function (e) {
-            if (e.which === 13) { // Enter
-              if (!isIE) $file.trigger('click');
-              $(this).closest('form').one('keydown', function(e) {
-                if (e.which === 13) e.preventDefault();
-              });
-            } else if (e.which === 8 || e.which === 46) { // Backspace & Del
-              // In IE the value is read-only
-              // with this trick we remove the old input and add
-              // a clean clone with all the original events attached
-              if (isIE) $file.replaceWith($file = $file.clone(true));
-              $file.val('').trigger('change');
-              $input.val('');
-            } else if (e.which === 9) { // TAB
-              return;
-            } else { // All other keys
-              return false;
-            }
+      });
+
+      $input.on({
+        blur: function () {
+          $file.trigger('blur');
+        },
+        keydown: function (e) {
+          if (e.which === 13) { // Enter
+            if (!isIE) $file.trigger('click');
+            $(this).closest('form').one('keydown', function(e) {
+              if (e.which === 13) e.preventDefault();
+            });
+          } else if (e.which === 8 || e.which === 46) { // Backspace & Del
+            // In IE the value is read-only
+            // with this trick we remove the old input and add
+            // a clean clone with all the original events attached
+            if (isIE) $file.replaceWith($file = $file.clone(true));
+            $file.val('').trigger('change');
+            $input.val('');
+          } else if (e.which === 9) { // TAB
+            return;
+          } else { // All other keys
+            return false;
           }
-        });
+        }
+      });
 
-      }
-  
+    }
+
   };
 
   require('../../plugin')(plugin);

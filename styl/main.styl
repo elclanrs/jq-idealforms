@@ -21,7 +21,7 @@ form.idealforms
     width: label-width
     margin-top: .55em
 
-  input, textarea, select, button, .field .group
+  input, textarea, select, .field .group
     reset-box-model()
     width: input-width
     padding: .55em
@@ -45,7 +45,7 @@ form.idealforms
 
   select
     padding: .55em
-    
+
     &:focus
       border: 1px solid darken(ui-element, 60)
 
@@ -100,12 +100,12 @@ form.idealforms
 
   .field .icon
     position: absolute
-    width: 16px
-    height: 16px
+    width: icon-size
+    height: icon-size
     top: 50%
     left: 100%
-    margin-top: -8px
-    margin-left: 8px
+    margin-top: -(icon-padding)
+    margin-left: icon-padding
     background: url(../img/validation.png) -16px 0 no-repeat
     cursor: pointer
 
@@ -139,7 +139,7 @@ form.idealforms
     top: 50%
     padding: 1em 1.5em
     width: error-width
-    margin-left: 32 + 8 px
+    margin-left: 32 + icon-padding
     if not icon
       margin-left: 1.25em
     background: error
@@ -172,4 +172,52 @@ form.idealforms
       margin-top: 0
 
     .error
-      top: 20px
+      top: 1.25em
+
+form.idealforms.adaptive
+
+  .field
+    float: none
+    max-width: input-width
+    clearfix()
+
+  label.main
+    display: block
+    float: none
+    width: auto
+    padding-bottom: .5em
+
+  input, textarea, select, .field .group
+    width: 100%
+
+  .field .icon
+    top: 0
+    margin-top: 3.1em
+
+  .error
+    position: relative
+    float: left
+    clear: both
+    width: 100%
+    left: 0
+    margin-left: 0
+    margin-top: 3px
+    border-radius: radius
+
+    &:after
+      top: 2px
+      left: 50%
+      margin-top: -1.4em
+      margin-left: -.35em
+      border-color: transparent
+      border-bottom-color: error
+
+    &.hidden
+      position: absolute
+      visibility: hidden
+
+  .idealforms-field-checkbox
+  .idealforms-field-radio
+  .idealforms-field-textarea
+    .error
+      top: 0

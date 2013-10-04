@@ -50,7 +50,8 @@
       require('./extensions/ajax/ajax.ext'),
       require('./extensions/steps/steps.ext'),
       require('./extensions/custom-inputs/custom-inputs.ext'),
-      require('./extensions/datepicker/datepicker.ext')
+      require('./extensions/datepicker/datepicker.ext'),
+      require('./extensions/adaptive/adaptive.ext')
     ]
   };
 

@@ -61,6 +61,8 @@ module.exports = {
     });
 
     $inputs.change().each(function(){ self._resetErrorAndStyle(this) });
+
+    this._inject('reset', name);
   }
 
 };

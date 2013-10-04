@@ -7,9 +7,11 @@ module.exports = (function() {
 
   return function(plugin) {
 
-    $.extend({
+    plugin = $.extend(true, {
       name: 'plugin',
-      defaults: {},
+      defaults: {
+        disabledExtensions: 'none'
+      },
       methods: {},
       global: {},
     }, plugin);
@@ -18,12 +20,6 @@ module.exports = (function() {
 
       addExtension: function(extension) {
         plugin.global.extensions.push(extension);
-      },
-
-      hasExtension: function(extension) {
-        return plugin.global.extensions.filter(function(ext) {
-          return ext.name == extension;
-        }).length;
       }
     }, plugin.global);
 
@@ -39,10 +35,18 @@ module.exports = (function() {
 
     Plugin._extended = {};
 
+    Plugin.prototype._hasExtension = function(extension) {
+
+      var self = this;
+
+      return plugin.global.extensions.filter(function(ext) {
+        return ext.name == extension && self.opts.disabledExtensions.indexOf(ext.name) < 0;
+      }).length;
+    };
+
     Plugin.prototype._extend = function(extensions) {
 
-      var self = this
-        , disabled = self.opts.disabledExtensions || 'none';
+      var self = this;
 
       $.each(extensions, function(i, extension) {
 
@@ -50,7 +54,7 @@ module.exports = (function() {
 
         $.each(extension.methods, function(method, fn) {
 
-          if (disabled.indexOf(extension.name) > -1) {
+          if (self.opts.disabledExtensions.indexOf(extension.name) > -1) {
             return;
           }
 

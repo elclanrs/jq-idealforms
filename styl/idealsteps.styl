@@ -1,6 +1,9 @@
 // Ideal Steps
 //---------------------------------------
 
+.idealsteps-container *
+  box-sizing: border-box
+
 .idealsteps-step
   clearfix()
 
@@ -89,3 +92,37 @@
       color: valid
       border-color: valid
 
+.idealsteps-container.adaptive
+
+  .idealsteps-nav
+    max-width: input-width
+
+    border-bottom: 0
+
+    li
+      float: none
+      overflow: hidden
+
+    a, li:first-child a, li.idealsteps-step-active a
+      width: 100%
+      padding: 0 2.5em 0 1.5em
+      border-bottom: 1px solid darken(ui-element, 20)
+      border-top: 1px solid lighten(ui-element, 10)
+      border-radius: 0
+
+      &:after,&:before
+        display: none
+
+    li:first-child a
+      border-radius: top radius
+
+    li:last-child a
+      border-radius: bottom radius
+
+    li.idealsteps-step-active a
+      padding-right: 1.5em
+
+    .counter
+      position: relative
+      float: right
+      right: 0

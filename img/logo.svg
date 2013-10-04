@@ -23,8 +23,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="528.18642"
-     inkscape:cy="694.15289"
+     inkscape:cx="472.88775"
+     inkscape:cy="619.76777"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -66,23 +66,15 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <path
-       style="fill:#942416;fill-opacity:1;stroke:none"
-       d="m 330,399.3622 313,0 0,59 -141.47051,0 -15.02949,6.11701 -14.90449,-6.11701 -141.59551,0 z"
-       id="path3758"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccc"
-       inkscape:export-filename="/home/elclanrs/Desktop/idealforms3.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/home/elclanrs/Desktop/idealforms3.png"
        sodipodi:nodetypes="cccccccc"
        inkscape:connector-curvature="0"
        id="rect2989"
-       d="m 330,395.3622 313,0 0,59 -143.03301,0 L 486.5,464.47921 473.03301,454.3622 330,454.3622 z"
-       style="fill:#c93929;fill-opacity:1;stroke:none" />
+       d="M330.0 395.3622047L643.0 395.3622047L643.0 455.3622047L499.96699 455.3622047L486.5 462.3622047L473.03301 455.3622047L330.0 455.3622047Z"
+       style="fill:#c93929;fill-opacity:1;stroke:none"
+       transform="matrix(1.000000,0.000000,0.000000,1.000000,0.000000,0.000000)" />
     <text
        transform="scale(1.0066801,0.99336421)"
        inkscape:export-ydpi="90"

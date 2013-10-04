@@ -1,6 +1,6 @@
 module.exports = {
 
-  name: 'idealAjax',
+  name: 'ajax',
 
   methods: {
 

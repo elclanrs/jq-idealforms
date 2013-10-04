@@ -11,14 +11,20 @@
 <title>Ideal Forms 3</title>
 <style>
   body {
-    width: 960px;
-    margin: 2em auto !important;
+    max-width: 980px;
+    margin: 2em auto;
     font: normal 15px/1.5 Arial, sans-serif;
     color: #353535;
     overflow-y: scroll;
   }
+  .content {
+    margin: 0 30px;
+  }
   .idealforms .submit {
     margin: .35em 120px;
+  }
+  .idealforms.adaptive .submit {
+    margin-left: 0;
   }
   #invalid {
     display: none;
@@ -32,133 +38,137 @@
 </head>
 <body>
 
-  <div class="idealsteps-container">
+  <div class="content">
 
-    <nav class="idealsteps-nav"></nav>
+    <div class="idealsteps-container">
 
-    <form action="" novalidate class="idealforms">
+      <nav class="idealsteps-nav"></nav>
 
-      <div class="idealsteps-wrap">
+      <form action="" novalidate class="idealforms">
 
-        <!-- Step 1 -->
+        <div class="idealsteps-wrap">
 
-        <section class="idealsteps-step">
+          <!-- Step 1 -->
 
-          <div class="field">
-            <label class="main">Username:</label>
-            <input name="username" type="text" data-idealforms-ajax="ajax.php">
-            <span class="error"></span>
-          </div>
+          <section class="idealsteps-step">
 
-          <div class="field">
-            <label class="main">E-Mail:</label>
-            <input name="email" type="email">
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Username:</label>
+              <input name="username" type="text" data-idealforms-ajax="ajax.php">
+              <span class="error"></span>
+            </div>
 
-          <div class="field">
-            <label class="main">Password:</label>
-            <input name="password" type="password">
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">E-Mail:</label>
+              <input name="email" type="email">
+              <span class="error"></span>
+            </div>
 
-          <div class="field">
-            <label class="main">Confirm:</label>
-            <input name="confirmpass" type="password">
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Password:</label>
+              <input name="password" type="password">
+              <span class="error"></span>
+            </div>
 
-          <div class="field">
-            <label class="main">Date:</label>
-            <input name="date" type="text" placeholder="mm/dd/yyyy" class="datepicker">
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Confirm:</label>
+              <input name="confirmpass" type="password">
+              <span class="error"></span>
+            </div>
 
-          <div class="field">
-            <label class="main">Picture:</label>
-            <input id="picture" name="picture" type="file" multiple>
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Date:</label>
+              <input name="date" type="text" placeholder="mm/dd/yyyy" class="datepicker">
+              <span class="error"></span>
+            </div>
 
-          <div class="field">
-            <label class="main">Website:</label>
-            <input name="website" type="text">
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Picture:</label>
+              <input id="picture" name="picture" type="file" multiple>
+              <span class="error"></span>
+            </div>
 
-        </section>
+            <div class="field">
+              <label class="main">Website:</label>
+              <input name="website" type="text">
+              <span class="error"></span>
+            </div>
 
-        <!-- Step 2 -->
+          </section>
 
-        <section class="idealsteps-step">
+          <!-- Step 2 -->
 
-          <div class="field">
-            <label class="main">Sex:</label>
-            <p class="group">
-              <label><input name="sex" type="radio" value="male">Male</label>
-              <label><input name="sex" type="radio" value="female">Female</label>
-            </p>
-            <span class="error"></span>
-          </div>
+          <section class="idealsteps-step">
 
-          <div class="field">
-            <label class="main">Hobbies:</label>
-            <p class="group">
-              <label><input name="hobbies[]" type="checkbox" value="football">Football</label>
-              <label><input name="hobbies[]" type="checkbox" value="basketball">Basketball</label>
-              <label><input name="hobbies[]" type="checkbox" value="dancing">Dancing</label>
-              <label><input name="hobbies[]" type="checkbox" value="dancing">Parkour</label>
-              <label><input name="hobbies[]" type="checkbox" value="dancing">Videogames</label>
-            </p>
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Sex:</label>
+              <p class="group">
+                <label><input name="sex" type="radio" value="male">Male</label>
+                <label><input name="sex" type="radio" value="female">Female</label>
+              </p>
+              <span class="error"></span>
+            </div>
 
-        </section>
+            <div class="field">
+              <label class="main">Hobbies:</label>
+              <p class="group">
+                <label><input name="hobbies[]" type="checkbox" value="football">Football</label>
+                <label><input name="hobbies[]" type="checkbox" value="basketball">Basketball</label>
+                <label><input name="hobbies[]" type="checkbox" value="dancing">Dancing</label>
+                <label><input name="hobbies[]" type="checkbox" value="dancing">Parkour</label>
+                <label><input name="hobbies[]" type="checkbox" value="dancing">Videogames</label>
+              </p>
+              <span class="error"></span>
+            </div>
 
-        <!-- Step 3 -->
+          </section>
 
-        <section class="idealsteps-step">
+          <!-- Step 3 -->
 
-          <div class="field">
-            <label class="main">Phone:</label>
-            <input name="phone" type="text">
-            <span class="error"></span>
-          </div>
+          <section class="idealsteps-step">
 
-          <div class="field">
-            <label class="main">Zip:</label>
-            <input name="zip" type="text">
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Phone:</label>
+              <input name="phone" type="text">
+              <span class="error"></span>
+            </div>
 
-          <div class="field">
-            <label class="main">Options:</label>
-            <select name="options" id="">
-              <option value="default">&ndash; Select an option &ndash;</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-              <option value="4">Four</option>
-            </select>
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Zip:</label>
+              <input name="zip" type="text">
+              <span class="error"></span>
+            </div>
 
-          <div class="field">
-            <label class="main">Comments:</label>
-            <textarea name="comments" cols="30" rows="10"></textarea>
-            <span class="error"></span>
-          </div>
+            <div class="field">
+              <label class="main">Options:</label>
+              <select name="options" id="">
+                <option value="default">&ndash; Select an option &ndash;</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+              </select>
+              <span class="error"></span>
+            </div>
 
-        </section>
+            <div class="field">
+              <label class="main">Comments:</label>
+              <textarea name="comments" cols="30" rows="10"></textarea>
+              <span class="error"></span>
+            </div>
 
-      </div>
+          </section>
 
-      <div class="submit">
-        <button type="submit">Submit</button>
-        <span id="invalid"></span>
-      </div>
+        </div>
 
-    </form>
+        <div class="submit">
+          <button type="submit">Submit</button>
+          <span id="invalid"></span>
+        </div>
+
+      </form>
+
+    </div>
 
   </div>
 
@@ -175,10 +185,10 @@
         'email': 'required email',
         'password': 'required pass',
         'confirmpass': 'required equalto:password',
-        'date': 'date',
+        'date': 'required date',
         'picture': 'required extension:jpg:png',
         'website': 'url',
-        'hobbies[]': 'minoption:1 maxoption:2',
+        'hobbies[]': 'minoption:2 maxoption:3',
         'phone': 'required phone',
         'zip': 'required zip',
         'options': 'select:default',
