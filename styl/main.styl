@@ -1,0 +1,175 @@
+// Style
+//---------------------------------------
+
+form.idealforms
+  clearfix()
+  line-height: 1.5
+
+  *
+    box-sizing: border-box
+
+  .field
+    position: relative
+    float: left
+    clear: both
+    margin: .35em 0
+
+  label.main, .field > input, select, button, textarea, .field .group
+    float: left
+
+  label.main
+    width: label-width
+    margin-top: .55em
+
+  input, textarea, select, button, .field .group
+    reset-box-model()
+    width: input-width
+    padding: .55em
+    border: 1px solid #999
+    outline: 0
+    background: white
+    border-radius: radius
+    box-shadow: inset 0 1px 2px rgba(black, .15)
+
+  input
+    transition: background .3s ease-in-out
+
+  textarea
+    width: input-width*1.5
+
+  select, button
+    idealbutton()
+
+  button
+    width: auto
+
+  select
+    padding: .55em
+    
+    &:focus
+      border: 1px solid darken(ui-element, 60)
+
+  input[type="file"]
+    padding: 0
+
+  .field .group
+    position: relative
+    padding: 1.25em
+    box-shadow: none
+
+    label
+      float: left
+      clear: both
+      padding: .15em 0
+
+      if group-horizontal
+        clear: none
+
+    input,label
+      margin: 0
+
+    input
+      width: auto
+      margin-right: .5em
+      box-shadow: none
+
+    label
+      margin-right: 1em
+      &:last-of-type
+        margin: 0
+
+  .field.valid
+    input, select, textarea, .group
+      color: darken(valid, 30)
+      background: valid-bg
+      border-color: valid
+
+  .field.invalid
+    input, select, textarea, .group
+      color: darken(invalid, 30)
+      background: invalid-bg
+      border-color: invalid
+
+  .field.valid, .field.invalid
+    .group, textarea, select
+      color: inherit
+      background: none
+
+    select
+      background: linear-gradient(lighten(ui-element, 15), ui-element)
+
+  .field .icon
+    position: absolute
+    width: 16px
+    height: 16px
+    top: 50%
+    left: 100%
+    margin-top: -8px
+    margin-left: 8px
+    background: url(../img/validation.png) -16px 0 no-repeat
+    cursor: pointer
+
+  .field.invalid .icon
+    background-position: -16px 0
+
+  .field.valid .icon
+    background-position: 0 0
+    cursor: default
+
+  .field.invalid, .field.valid
+    .group input
+      border: 0
+      outline: 0
+      box-shadow: none
+
+  .field.ajax
+    input
+      color: darken(ajax, 30)
+      background: ajax-bg
+      border-color: ajax
+
+    .icon
+      background: url(../img/loading.gif)
+
+  .error
+    display: none
+    position: absolute
+    z-index: 1
+    left: 100%
+    top: 50%
+    padding: 1em 1.5em
+    width: error-width
+    margin-left: 32 + 8 px
+    if not icon
+      margin-left: 1.25em
+    background: error
+    background: linear-gradient(error, lighten(error, 7))
+    color: lighten(error, 90)
+    font-size: 85%
+    font-weight: bold
+    text-shadow: 0 1px 0 rgba(black, .3)
+    line-height: 1.35
+    border: 1px solid darken(error, 10)
+    border-radius: 0 radius radius radius
+    box-shadow: 0 1px 1px rgba(black, .15)
+
+    &:after
+      content: ""
+      position: absolute
+      z-index: -1
+      top: -1px
+      left: -.7em
+      border-width: .7em
+      border-style: solid
+      border-color: transparent
+      border-top-color: error
+
+  .idealforms-field-checkbox
+  .idealforms-field-radio
+  .idealforms-field-textarea
+    .icon
+      top: 8px
+      margin-top: 0
+
+    .error
+      top: 20px

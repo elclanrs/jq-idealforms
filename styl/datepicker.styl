@@ -1,0 +1,72 @@
+// Datepicker
+//---------------------------------------
+
+.idealforms input.datepicker.open
+  border-bottom-color: transparent
+  border-radius: 0
+  border-radius: top radius
+
+.ui-datepicker
+  display: none
+  box-sizing: border-box
+  width: input-width
+  margin-top: -2px
+  padding: .75em
+  background: white
+  border: 1px solid #999
+  border-radius: bottom radius
+  box-shadow: 0 1px 2px rgba(black, .2)
+
+.ui-datepicker-header
+  position: relative
+  padding: .2em 0
+  margin-bottom: .75em
+  font-weight: bold
+
+  .ui-datepicker-title
+    text-align: center
+
+  .ui-datepicker-prev
+  .ui-datepicker-next
+    text-indent: -9999px
+    width: 16px
+    height: 16px
+    position: absolute
+    cursor: pointer
+    user-select: none
+    background: url(../img/datepicker.png) 0 0
+
+    &:active
+      margin-top: 1px
+
+  .ui-datepicker-next
+    background-position: -16px 0
+
+  .ui-datepicker-prev
+    left: 8px
+
+  .ui-datepicker-next
+    right: 8px
+
+.ui-datepicker-calendar
+  width: 100%
+  border-collapse: collapse
+  table-layout: fixed
+
+  td
+    padding: .25em 0
+    text-align: center
+
+  a
+    display: block
+    text-decoration: none
+    color: gray
+
+    &:hover
+      color: valid
+      font-weight: bold
+
+  .ui-datepicker-today a
+    margin: 0 .25em
+    background: #eee
+    border-radius: radius

@@ -1,0 +1,42 @@
+// Theme
+//---------------------------------------
+
+valid = #3F9DCC
+valid-bg = #EDF7FC
+invalid = #CC2A18
+invalid-bg = #FFEDED
+ajax = #CFAA19
+ajax-bg = #FAF9E8
+ui-element = #ddd
+error = #285d85
+
+label-width = 120px
+input-width = 290px
+error-width = (input-width/1.5)
+radius = 3px
+
+icon = true
+group-horizontal = false
+
+// Mixins
+//---------------------------------------
+
+ui()
+  color: darken(ui-element, 70)
+  background: #eee
+  background: linear-gradient(lighten(ui-element, 15), ui-element)
+  border: 1px solid darken(ui-element, 20)
+  border-bottom-color: darken(ui-element, 30)
+  box-shadow: 0 1px 2px rgba(black, .15)
+  border-radius: radius
+
+idealbutton()
+  ui()
+  padding: .55em 1.5em
+
+  &:hover
+    background: linear-gradient(lighten(ui-element, 20), lighten(ui-element, 5))
+
+  &:active
+    background: ui-element
+

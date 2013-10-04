@@ -1,0 +1,91 @@
+// Ideal Steps
+//---------------------------------------
+
+.idealsteps-step
+  clearfix()
+
+.idealsteps-nav
+
+  ui()
+  overflow: hidden
+  margin-bottom: 2em
+
+  ul
+    reset-box-model()
+    list-style: none
+
+  li
+    float: left
+
+  a
+    position: relative
+    float: left
+    padding: 0 1.5em 0 2.75em
+    height: 3.5em
+    line-height: 3.5em
+    text-decoration: none
+    color: darken(ui-element, 50)
+    background: ui-element
+    transition: padding .2s ease-in-out
+
+    &:focus
+      outline: 0 // Firefox
+
+    &:hover
+      background: lighten(ui-element, 5)
+      &:after
+        border-left-color: lighten(ui-element, 5)
+
+    &:after, &:before
+      content: ""
+      position: absolute
+      z-index: 1
+      top: 0
+      right: -2em
+      margin-right: 0
+      margin-top: -.125em
+      border-width: 2em 1em
+      border-style: solid
+      border-color: transparent
+      border-left-color: ui-element
+
+    &:before
+      margin-right: -1px
+      border-left-color: darken(ui-element, 20)
+
+  li:first-child a
+    padding-left: 1.75em
+
+  li.idealsteps-step-active
+    a
+      padding-right: 3.5em
+      background: white
+      color: valid
+      font-weight: bold
+
+      &:after
+        border-left-color: white
+
+    .counter
+      opacity: 1
+
+  .counter
+    opacity: 0
+    position: absolute
+    top: 50%
+    right: 1em
+    height: 20px
+    width: 20px
+    margin-top: -.75em
+    line-height: 20px !important
+    text-align: center
+    line-height: 1
+    color: invalid
+    border: 1px solid invalid
+    border-radius: 10em
+    transition: opacity .2s ease-in-out
+
+    &.zero
+      color: valid
+      border-color: valid
+
