@@ -557,7 +557,7 @@ Go to the last step.
 Steps adds the `appendToStep:index` option to `addFields`:
 
 ```javascript
-$('form').addFields({ 'newfield': { type: 'text', label: 'New Field', appendToStep: 1 }});
+$('form').addFields({ 'field': { type: 'text', label: 'Field', appendToStep: 1 }});
 ```
 
 ### Extension: Custom Inputs
