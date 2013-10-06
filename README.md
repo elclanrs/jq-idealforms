@@ -678,12 +678,12 @@ To add a custom extension provide a `name`, extended `options` and extended `met
 - **focusFirstInvalid:** Inject code when the first input is focused.
 - **reset(name):** Reset the form. `name` is an input name, if any. Check the [reset](#idealformsreset-name) method.
 
-It is recommended that you always namespae your extension, by prefixing it with a unique identifier:
+It is recommended that you always namespace your extension, by prefixing it with a unique identifier:
 
 ```javascript
 $.idealforms.addExtension({
 
-  name: 'extensionName',
+  name: 'MY_extensionName',
   
   options: {
     MY_option: 'default'  
