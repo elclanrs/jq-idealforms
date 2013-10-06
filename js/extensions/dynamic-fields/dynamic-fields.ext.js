@@ -67,14 +67,13 @@ module.exports = {
 
         var typeArray = field.type.split(':')
           , rules = {}
-          , $last = self.$form.find(self.opts.field).last()
-          , html;
+          , $last = self.$form.find(self.opts.field).last();
 
         field.name = name;
         field.type = typeArray[0];
         if (typeArray[1]) field.subtype = typeArray[1];
 
-        html = template(self.opts.templates.base, {
+        field.html = template(self.opts.templates.base, {
           label: field.label,
           field: template(self.opts.templates[field.type], field)
         });
@@ -83,13 +82,13 @@ module.exports = {
 
         if (field.after || field.before) {
           self.$form.find('[name="'+ (field.after || field.before) +'"]').first().each(function() {
-            self._getField(this)[field.after ? 'after' : 'before'](html);
+            self._getField(this)[field.after ? 'after' : 'before'](field.html);
           });
         } else {
           // Form has at least one field
-          if ($last.length) $last.after(html);
+          if ($last.length) $last.after(field.html);
           // Form has no fields
-          else self.$form.append(html);
+          else self.$form.append(field.html);
         }
 
         if (field.rules) {
