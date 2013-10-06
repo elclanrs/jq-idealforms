@@ -18,6 +18,7 @@ form.idealforms textarea{width:435px}
 form.idealforms select,form.idealforms button{color:#2b2b2b;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3px;border-radius:3px;padding:.55em 1.5em;}
 form.idealforms select:hover,form.idealforms button:hover{background:-webkit-linear-gradient(#fff, #eaeaea);background:-moz-linear-gradient(#fff, #eaeaea);background:-o-linear-gradient(#fff, #eaeaea);background:-ms-linear-gradient(#fff, #eaeaea);background:linear-gradient(#fff, #eaeaea)}
 form.idealforms select:active,form.idealforms button:active{background:#ddd}
+form.idealforms select:focus,form.idealforms button:focus{outline:none}
 form.idealforms button{width:auto}
 form.idealforms select{padding:.55em;}
 form.idealforms select:focus{border:1px solid #444}
@@ -94,6 +95,7 @@ form.idealforms .ideal-file-filename{float:left;width:204px;height:100%;-webkit-
 form.idealforms .ideal-file-upload{color:#2b2b2b;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3px;border-radius:3px;padding:.55em 1.5em;overflow:visible;position:relative;float:right;left:-1px;width:87px;padding-left:0;padding-right:0;text-align:center;-webkit-border-radius:0;border-radius:0;-webkit-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;border-bottom-right-radius:3px;}
 form.idealforms .ideal-file-upload:hover{background:-webkit-linear-gradient(#fff, #eaeaea);background:-moz-linear-gradient(#fff, #eaeaea);background:-o-linear-gradient(#fff, #eaeaea);background:-ms-linear-gradient(#fff, #eaeaea);background:linear-gradient(#fff, #eaeaea)}
 form.idealforms .ideal-file-upload:active{background:#ddd}
+form.idealforms .ideal-file-upload:focus{outline:none}
 form.idealforms.adaptive .ideal-file-wrap{width:100%}
 form.idealforms.adaptive .ideal-file-filename{width:70%}
 form.idealforms.adaptive .ideal-file-upload{width:30%}
