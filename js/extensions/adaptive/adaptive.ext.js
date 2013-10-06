@@ -27,15 +27,13 @@ module.exports = {
           self.$stepsContainer.toggleClass('adaptive', isAdaptive);
         }
 
-        if (self._hasExtension('datepicker')) {
-          $('#ui-datepicker-div').hide();
-        }
+        $('#ui-datepicker-div').hide();
       }
 
       $(window).resize(adapt);
       adapt();
 
-      this.$form.find('select').each(function() {
+      this.$form.find('select, .datepicker').each(function() {
         self._getField(this).find(self.opts.error).addClass('hidden');
       });
 

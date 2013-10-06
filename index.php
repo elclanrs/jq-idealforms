@@ -129,13 +129,13 @@
 
             <div class="field">
               <label class="main">Phone:</label>
-              <input name="phone" type="text">
+              <input name="phone" type="text" placeholder="000-000-0000">
               <span class="error"></span>
             </div>
 
             <div class="field">
               <label class="main">Zip:</label>
-              <input name="zip" type="text">
+              <input name="zip" type="text" placeholder="00000">
               <span class="error"></span>
             </div>
 
