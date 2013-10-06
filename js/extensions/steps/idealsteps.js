@@ -39,7 +39,8 @@
       this.$steps.hide().first().show();
       this.$navItems.removeClass(active).first().addClass(active);
 
-      this.$navItems.click(function() {
+      this.$navItems.click(function(e) {
+        e.preventDefault();
         self.go(self.$navItems.index(this));
       });
     },
