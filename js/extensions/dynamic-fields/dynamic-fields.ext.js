@@ -66,23 +66,30 @@ module.exports = {
       $.each(fields, function(name, field) {
 
         var typeArray = field.type.split(':')
-          , rules = {};
+          , rules = {}
+          , $last = self.$form.find(self.opts.field).last()
+          , html;
 
         field.name = name;
         field.type = typeArray[0];
         if (typeArray[1]) field.subtype = typeArray[1];
 
-        var html = template(self.opts.templates.base, {
+        html = template(self.opts.templates.base, {
           label: field.label,
           field: template(self.opts.templates[field.type], field)
         });
 
+        self._inject('addFields', field);
+
         if (field.after || field.before) {
-          self.$form.find('[name='+ (field.after || field.before) +']').each(function() {
+          self.$form.find('[name="'+ (field.after || field.before) +'"]').first().each(function() {
             self._getField(this)[field.after ? 'after' : 'before'](html);
           });
         } else {
-          self.$form.find(self.opts.field).last().after(html);
+          // Form has at least one field
+          if ($last.length) $last.after(html);
+          // Form has no fields
+          else self.$form.append(html);
         }
 
         if (field.rules) {
@@ -91,7 +98,6 @@ module.exports = {
         }
       });
 
-      this._inject('addFields');
     },
 
     removeFields: function(names) {

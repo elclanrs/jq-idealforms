@@ -515,10 +515,10 @@ Steps adds the following options to Ideal Forms:
 
 ```javascript
 {
-  stepsContainer: 'idealsteps-container', // the main container
-  stepsOptions: { // the options for the Steps extension
-    nav: '.idealsteps-nav',
-    navItems: 'li',
+  steps: {
+    container: 'idealsteps-container', // the main container
+    nav: '.idealsteps-nav', // navigation
+    navItems: 'li', // navigation element that receives events
     // Build nav items as "Step 1", "Step 2"... automatically
     // Set to `false` to use your own custom markup
     buildNavItems: true,
@@ -553,6 +553,12 @@ Go to the first step.
 #### .idealforms('lastStep')
 
 Go to the last step.
+
+Steps adds the `appendToStep:index` option to `addFields`:
+
+```javascript
+$('form').addFields({ 'newfield': { type: 'text', label: 'New Field', appendToStep: 1 }});
+```
 
 ### Extension: Custom Inputs
 

@@ -5,8 +5,18 @@ module.exports = {
   name: 'steps',
 
   options: {
-    stepsContainer: '.idealsteps-container',
-    stepsOptions: {}
+    steps: {
+      container: '.idealsteps-container',
+      nav: '.idealsteps-nav',
+      navItems: 'li',
+      buildNavItems: true,
+      wrap: '.idealsteps-wrap',
+      step: '.idealsteps-step',
+      activeClass: 'idealsteps-step-active',
+      before: null,
+      after: null,
+      fadeSpeed: 0
+    }
   },
 
   methods: {
@@ -50,11 +60,15 @@ module.exports = {
           ? '<span class="counter"/>'
           : '<span class="counter zero">0</span>';
 
-      options = $.extend({}, {
-        buildNavItems: function(i){ return 'Step '+ (i+1) + counter }
-      }, this.opts.stepsOptions);
+      if (this.opts.steps.buildNavItems === true) {
+        this.opts.steps.buildNavItems = function(i) {
+          return 'Step '+ (i+1) + counter;
+        };
+      }
 
-      this.$stepsContainer = this.$form.closest(this.opts.stepsContainer).idealsteps(options);
+      this.$stepsContainer = this.$form
+        .closest(this.opts.steps.container)
+        .idealsteps(this.opts.steps);
     },
 
     _updateSteps: function() {
@@ -75,6 +89,15 @@ module.exports = {
     // @extend
     addRules: function() {
       this.firstStep();
+    },
+
+    // @extend
+    addFields: function(field) {
+      field.after = this.$stepsContainer
+        .find(this.opts.steps.step)
+        .eq(field.appendToStep)
+        .find('input, textarea, select')
+        .last()[0].name;
     },
 
     // @extend
