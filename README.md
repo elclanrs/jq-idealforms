@@ -537,6 +537,17 @@ Steps adds the following options to Ideal Forms:
 }
 ```
 
+For example, you could build the steps with your own text like so:
+
+```javascript
+steps: {
+  MY_stepsItems: ['One', 'Two', 'Three'],
+  buildNavItems: function(i) {
+    return this.opts.steps.MY_stepsItems[i];
+  }
+}
+```
+
 Steps provides these methods:
 
 #### .idealforms('goToStep', index)

@@ -65,7 +65,7 @@ module.exports = {
 
       if (this.opts.steps.buildNavItems) {
         this.opts.steps.buildNavItems = function(i) {
-          return buildNavItems(i) + counter;
+          return buildNavItems.call(self, i) + counter;
         };
       }
 

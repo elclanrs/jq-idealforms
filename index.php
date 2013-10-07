@@ -180,6 +180,13 @@
 
     $('form').idealforms({
 
+      steps: {
+        MY_stepsItems: ['One', 'Two', 'Three'],
+        buildNavItems: function(i) {
+          return this.opts.steps.MY_stepsItems[i];
+        }
+      },
+
       rules: {
         'username': 'required username ajax',
         'email': 'required email',
