@@ -26,7 +26,7 @@ module.exports = {
     templates: {
 
       base:'\
-        <div class="field" {class}>\
+        <div class="field">\
           <label class="main">{label}</label>\
           {field}\
           <span class="error"></span>\
