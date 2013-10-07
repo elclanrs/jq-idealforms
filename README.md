@@ -524,7 +524,7 @@ Steps adds the following options to Ideal Forms:
     // Build nav items as "Step 1", "Step 2"... automatically
     // or pass your own custom function.
     // Set to `false` to use your own custom markup
-    buildNavItems:function(i) {
+    buildNavItems: function(i) {
       return 'Step '+ (i+1);
     },
     wrap: '.idealsteps-wrap',
