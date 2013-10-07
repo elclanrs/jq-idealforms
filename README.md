@@ -75,6 +75,8 @@ Ideal Forms 3 is **not** compatible with version 2. You can still find Ideal For
 $('form').idealforms({ options });
 ```
 
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
+
 ## Options
 
 ```javascript
@@ -144,6 +146,7 @@ Field rules. See [Adding Rules](#adding-rules).
 
 User defined errors for added rules. See [Custom Errors](#custom-errors).
 
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
 
 ## Markup
 
@@ -231,6 +234,8 @@ $('form').idealforms({
 });
 ```
 
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
+
 ## Adding Rules
 
 Pass an object to the `rules` option, where each key corresponds to a `name` attribute and each value is a string of rules assigned to that input. Always quote keys for consistency:
@@ -278,6 +283,8 @@ $('form').idealforms({
 });
 ```
 
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
+
 ## Built-in Rules
 
 A rule must be in this format `rule:param` where `rule` is the name of the `rule` and `param` is a rule parameter, for example `minmax:10:50` will use the `minmax` rule with two arguments, `10` and `50`.
@@ -302,6 +309,8 @@ A rule must be in this format `rule:param` where `rule` is the name of the `rule
 - **extension:ext:** Validates file inputs. You can have as many `ext` as you want.
 - **equalto:name:** Must be equal to another field where `name` is the name of the field.
 - **ajax:** See the built-in [Ajax Extension](#ajax).
+
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
 
 ## Methods
 
@@ -332,6 +341,8 @@ If you pass a `name` it will check if that input is valid, otherwise it will che
 ### .idealforms('reset', name)
 
 If you pass a `name` it will reset that single input, if you don't it will reset all inputs to zero. That means emptying all the values of text inputs, unchecking all checkboxes and radios, and reverting selects to their default option.
+
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
 
 ## Built-in Extensions
 
@@ -603,7 +614,8 @@ $('form').idealforms({
   },
   errors: {
     'username': {
-      ajaxError: 'Username not available'
+      ajax: 'Checking user availability...',
+      ajaxError: 'Username not available, try a different one.'
     }
   }
 });
@@ -663,6 +675,8 @@ $('form').idealforms({
 });
 ```
 
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
+
 ## Custom Rules
 
 You can add rules by extending the global `rules` object:
@@ -690,6 +704,8 @@ $.extend($.idealforms.errors, {
 ```
 
 If the rule is a function that takes rule parameters pass the parameters as `{0}`, `{1}`, etc. If you want to print all the parameters use `{*}` where the default separator is a comma but you can use your own like `{*~}` where `~` is the custom separator.
+
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
 
 ## Custom Extensions
 
@@ -737,6 +753,8 @@ _init: function() {
 }
 ```
 
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
+
 ## Themes
 
 Ideal Forms 3 themes are built with [Stylus](http://learnboost.github.io/stylus/). To create your own theme to use with the default markup open `styl/vars.stly`, modify what you need and [compile](#build--share).
@@ -763,6 +781,16 @@ icon-padding = 8px // padding between icon, input and error
 group-horizontal = false // group checkbox and radio horizontally
 
 ```
+
+To customize the theme in your CSS file make sure to always add the `form.idealforms` selector so it takes precedence over the default styles, for example, you may change the default label width like:
+
+```css
+form.idealforms label.main {
+  width: 200px;
+}
+```
+
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
 
 ## FAQ
 
@@ -794,6 +822,8 @@ site
 
 When you download Ideal Forms, make sure to place the images inside `img`. If your folder structure is different you have to open `css/jquery.idealforms.css` and search and replace `../img/` with the correct path to your images folder relative to the plugin.
 
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
+
 ## Build & Share
 
 Ideal Forms 3 is built using some popular NodeJS tools. This is what you'll need to install globally:
@@ -811,6 +841,8 @@ If you want to test ajax make sure to run it on your localhost.
 This instructions have only been tested on Ubuntu, but you should be able to compile on any Unix system. Some Windows terminal emulators don't provide the `watch` command, but you can still run the script normally with bash `sh compile.sh`.
 
 **Enjoy** ![smiley](http://www.4smileys.com/smileys/happy-smileys/happy-smiley11.gif)
+
+[![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
 
 ## Update History
 

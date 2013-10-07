@@ -5,8 +5,8 @@
 <!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-<link rel="stylesheet" href="css/jquery.idealforms.css">
 <link rel="stylesheet" href="http://necolas.github.io/normalize.css/2.1.3/normalize.css">
+<link rel="stylesheet" href="css/jquery.idealforms.css">
 <meta charset=utf-8 />
 <title>Ideal Forms 3</title>
 <style>
@@ -179,13 +179,6 @@
   <script>
 
     $('form').idealforms({
-
-      steps: {
-        MY_stepsItems: ['One', 'Two', 'Three'],
-        buildNavItems: function(i) {
-          return this.opts.steps.MY_stepsItems[i];
-        }
-      },
 
       rules: {
         'username': 'required username ajax',
