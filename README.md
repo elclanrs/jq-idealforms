@@ -311,6 +311,8 @@ To call a method run `idealforms` on the form and pass the method and arguments:
 $('form').idealforms('method', arg1, arg2, ...);
 ```
 
+Methods that have a colon like `is:valid` return something other than the instance, so they can't be chained.
+
 ### .idealforms('addRules', rules)
   
 See [Adding Rules](#adding-rules)
