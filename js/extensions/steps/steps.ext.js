@@ -9,7 +9,9 @@ module.exports = {
       container: '.idealsteps-container',
       nav: '.idealsteps-nav',
       navItems: 'li',
-      buildNavItems: true,
+      buildNavItems: function(i) {
+        return 'Step '+ (i+1);
+      },
       wrap: '.idealsteps-wrap',
       step: '.idealsteps-step',
       activeClass: 'idealsteps-step-active',
@@ -56,13 +58,14 @@ module.exports = {
 
       var self = this, options
         , hasRules = ! $.isEmptyObject(this.opts.rules)
+        , buildNavItems = this.opts.steps.buildNavItems
         , counter = hasRules
           ? '<span class="counter"/>'
           : '<span class="counter zero">0</span>';
 
-      if (this.opts.steps.buildNavItems === true) {
+      if (this.opts.steps.buildNavItems) {
         this.opts.steps.buildNavItems = function(i) {
-          return 'Step '+ (i+1) + counter;
+          return buildNavItems(i) + counter;
         };
       }
 
