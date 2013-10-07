@@ -566,6 +566,8 @@ $('form').addFields({ 'field': { type: 'text', label: 'Field', appendToStep: 1 }
 
 Adds custom checkboxes, radios and file inputs (yes!) seamlessly. The custom select menu has been dropped from Ideal Forms 3; it was proving to be a pain to maintain, and there are much better alternatives, such as [Select2](http://ivaynberg.github.io/select2/) if you need them.
 
+**Note:** File inputs must have an `id` as well as a `name` to work on IE.
+
 This extension has no additional options or methods.
 
 ### Extension: Ajax
