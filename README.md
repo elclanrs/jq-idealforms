@@ -400,7 +400,7 @@ The HTML is generated according to built-in templates. If you're using your own 
 
 ```html
 <!-- Base -->
-<div class="field" {class}>
+<div class="field">
   <label class="main">{label}</label>
   {field}
   <span class="error"></span>
