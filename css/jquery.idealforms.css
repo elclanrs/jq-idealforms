@@ -70,7 +70,7 @@ form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adapt
 .idealsteps-nav li.idealsteps-step-active a{padding-right:3.5em;background:#fff;color:#3f9dcc;font-weight:bold;}
 .idealsteps-nav li.idealsteps-step-active a:after{border-left-color:#fff}
 .idealsteps-nav li.idealsteps-step-active .counter{opacity:1;-ms-filter:none;filter:none}
-.idealsteps-nav .counter{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);position:absolute;top:50%;right:1em;height:20px;width:20px;margin-top:-.75em;line-height:20px !important;text-align:center;line-height:1;color:#cc2a18;border:1px solid #cc2a18;-webkit-border-radius:10em;border-radius:10em;-webkit-transition:opacity 0.2s ease-in-out;-moz-transition:opacity 0.2s ease-in-out;-o-transition:opacity 0.2s ease-in-out;-ms-transition:opacity 0.2s ease-in-out;transition:opacity 0.2s ease-in-out;}
+.idealsteps-nav .counter{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);position:absolute;top:50%;right:1em;height:1.5em;width:1.5em;margin-top:-.75em;line-height:1.5 !important;text-align:center;color:#cc2a18;border:1px solid #cc2a18;-webkit-border-radius:10em;border-radius:10em;-webkit-transition:opacity 0.2s ease-in-out;-moz-transition:opacity 0.2s ease-in-out;-o-transition:opacity 0.2s ease-in-out;-ms-transition:opacity 0.2s ease-in-out;transition:opacity 0.2s ease-in-out;}
 .idealsteps-nav .counter.zero{color:#3f9dcc;border-color:#3f9dcc}
 .idealsteps-container.adaptive .idealsteps-nav{max-width:290px;border-bottom:0;}
 .idealsteps-container.adaptive .idealsteps-nav li{float:none;overflow:hidden}
@@ -80,7 +80,7 @@ form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adapt
 .idealsteps-container.adaptive .idealsteps-nav li:last-child a{-webkit-border-bottom-left-radius:3.01px;border-bottom-left-radius:3.01px;-webkit-border-bottom-right-radius:3.01px;border-bottom-right-radius:3.01px;}
 .idealsteps-container.adaptive .idealsteps-nav li.idealsteps-step-active a{padding-right:1.5em}
 .idealsteps-container.adaptive .idealsteps-nav .counter{position:relative;float:right;right:0}
-form.idealforms .ideal-radiocheck-label{cursor:pointer;margin:.15em 0 !important;}
+form.idealforms .ideal-radiocheck-label{display:inline-block;margin:.15em 0 !important;cursor:pointer;}
 form.idealforms .ideal-radiocheck-label input{float:left}
 form.idealforms .ideal-check,form.idealforms .ideal-radio{float:left;margin-right:10px !important;width:20px;height:20px;background:url("../img/radiocheck.png") 0 0}
 form.idealforms .ideal-check.focus{background-position:-20px 0}
