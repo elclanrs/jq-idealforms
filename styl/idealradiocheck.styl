@@ -13,30 +13,79 @@ form.idealforms
     input
       float: left
 
-  .ideal-check, .ideal-radio
-    float: left
-    margin-right: 10px !important
-    width: 20px
-    height: 20px
-    background: url(../img/radiocheck.png) 0 0
 
-  .ideal-check.focus
-    background-position: -20px 0
+  if radiocheck-sprite
 
-  .ideal-check.checked
-    background-position: -40px 0
+    .ideal-check, .ideal-radio
+      float: left
+      margin-right: 10px !important
+      width: 20px
+      height: 20px
+      background: url(../img/radiocheck.png) 0 0
 
-  .ideal-check.checked.focus
-    background-position: -60px 0
+    .ideal-check.focus
+      background-position: -20px 0
 
-  .ideal-radio
-    background-position: 0 bottom
+    .ideal-check.checked
+      background-position: -40px 0
 
-  .ideal-radio.focus
-    background-position: -20px bottom
+    .ideal-check.checked.focus
+      background-position: -60px 0
 
-  .ideal-radio.checked
-    background-position: -40px bottom
+    .ideal-radio
+      background-position: 0 bottom
 
-  .ideal-radio.checked.focus
-    background-position: -60px bottom
+    .ideal-radio.focus
+      background-position: -20px bottom
+
+    .ideal-radio.checked
+      background-position: -40px bottom
+
+    .ideal-radio.checked.focus
+      background-position: -60px bottom
+
+  else
+
+    .ideal-check, .ideal-radio
+      position: relative
+      float: left
+      margin-right: 10px !important
+      width: 18px
+      height: 18px
+      background: linear-gradient(white, #eee)
+      border: 1px solid #bbb
+      border-radius: 4px
+      box-shadow: 0 1px 1px rgba(black, .2)
+      &:after
+        display: none
+
+    .ideal-radio
+      border-radius: 18px
+
+    .ideal-check.focus, .ideal-radio.focus
+      border-color: valid
+      box-shadow: 0 1px 1px rgba(black, .2), 0 0 3px rgba(valid, .75)
+
+    .ideal-check:after, .ideal-radio:after
+      content: "×"
+      position: absolute
+      left: 50%
+      height: 18px
+      width: 18px
+      line-height: 18px
+      margin-left: -9px
+      text-align: center
+      font-size: 20px
+      color: #888
+      text-shadow: 1px 1px 0 white
+
+    .ideal-radio:after
+      content: "•"
+      font-size: 22px
+
+    .ideal-check.checked
+    .ideal-check.checked.focus
+    .ideal-radio.checked
+    .ideal-radio.checked.focus
+      &:after
+        display: block
