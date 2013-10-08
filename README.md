@@ -4,7 +4,8 @@ The best forms just got better! Ideal Forms 3 is smaller, faster, and more exten
 
 **License:** GPL or MIT  
 **Support:** IE9+ and all modern browsers  
-**Demo:** http://bit.ly/GFrp55
+**Docs:** http://bit.ly/GFrp55 (not always in sync)  
+**Demo:** http://bit.ly/1ahZalu
 
 ### Features
 - On the spot validation
