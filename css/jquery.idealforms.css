@@ -80,7 +80,7 @@ form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adapt
 .idealsteps-container.adaptive .idealsteps-nav li:last-child a{-webkit-border-bottom-left-radius:3.01px;border-bottom-left-radius:3.01px;-webkit-border-bottom-right-radius:3.01px;border-bottom-right-radius:3.01px;}
 .idealsteps-container.adaptive .idealsteps-nav li.idealsteps-step-active a{padding-right:1.5em}
 .idealsteps-container.adaptive .idealsteps-nav .counter{position:relative;float:right;right:0}
-form.idealforms .ideal-radiocheck-label{display:inline-block;margin:.15em 0 !important;cursor:pointer;}
+form.idealforms .ideal-radiocheck-label{display:inline-block;margin:.1em 0 !important;cursor:pointer;}
 form.idealforms .ideal-radiocheck-label input{float:left}
 form.idealforms .ideal-check,form.idealforms .ideal-radio{float:left;margin-right:10px !important;width:20px;height:20px;background:url("../img/radiocheck.png") 0 0}
 form.idealforms .ideal-check.focus{background-position:-20px 0}
