@@ -22,6 +22,8 @@
           // Hack for IE
         , $label = $('<label class="ideal-file-upload" for="' + $file[0].id + '">Open</label>');
 
+      if (isIE) $label.add($button).addClass('ie');
+
       // Hide by shifting to the left so we
       // can still trigger events
       $file.css({

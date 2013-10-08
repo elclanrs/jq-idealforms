@@ -99,7 +99,7 @@ form.idealforms .ideal-file-upload:focus{outline:none}
 form.idealforms.adaptive .ideal-file-wrap{width:100%}
 form.idealforms.adaptive .ideal-file-filename{width:70%}
 form.idealforms.adaptive .ideal-file-upload{width:30%}
-.ie9 .ideal-file-upload{line-height:1.15}
+.ideal-file-upload.ie{line-height:1.15}
 .idealforms input.datepicker.open{border-bottom-color:transparent;-webkit-border-radius:0;border-radius:0;-webkit-border-top-left-radius:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;border-top-right-radius:3px;}
 .ui-datepicker{display:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:290px;margin-top:-2px;padding:.75em;background:#fff;border:1px solid #999;-webkit-border-bottom-left-radius:3px;border-bottom-left-radius:3px;-webkit-border-bottom-right-radius:3px;border-bottom-right-radius:3px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);box-shadow:0 1px 2px rgba(0,0,0,0.2)}
 .ui-datepicker-header{position:relative;padding:.2em 0;margin-bottom:.75em;font-weight:bold;}
