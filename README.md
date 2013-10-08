@@ -778,6 +778,7 @@ icon = true // disable icons (must disable in plugin options too)
 icon-size = 16px // must be square icon
 icon-padding = 8px // padding between icon, input and error
 
+radiocheck-sprite = true // `false` for css only style, no sprite (IE9 buggy)
 group-horizontal = false // group checkbox and radio horizontally
 
 ```
@@ -845,6 +846,9 @@ This instructions have only been tested on Ubuntu, but you should be able to com
 [![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
 
 ## Update History
+
+#### 07/10/13
+- Alternative scalable radiocheck style without sprites
 
 #### 05/10/13
 - Adaptive extension brings back responsive theme.
