@@ -12,10 +12,10 @@ form.idealforms *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-s
 form.idealforms .field{position:relative;float:left;clear:both;margin:.35em 0}
 form.idealforms label.main,form.idealforms .field > input,form.idealforms select,form.idealforms button,form.idealforms textarea,form.idealforms .field .group{float:left}
 form.idealforms label.main{width:120px;margin-top:.55em}
-form.idealforms input,form.idealforms textarea,form.idealforms select,form.idealforms .field .group{margin:0;padding:0;border:0;outline:0;width:290px;padding:.55em;border:1px solid #999;outline:0;background:#fff;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.15);box-shadow:inset 0 1px 2px rgba(0,0,0,0.15)}
+form.idealforms input,form.idealforms textarea,form.idealforms select,form.idealforms .field .group{margin:0;padding:0;border:0;outline:0;width:290px;padding:.55em;border:1px solid #999;outline:0;background:#fff;-webkit-border-radius:3.01px;border-radius:3.01px;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.15);box-shadow:inset 0 1px 2px rgba(0,0,0,0.15)}
 form.idealforms input{-webkit-transition:background 0.3s ease-in-out;-moz-transition:background 0.3s ease-in-out;-o-transition:background 0.3s ease-in-out;-ms-transition:background 0.3s ease-in-out;transition:background 0.3s ease-in-out}
 form.idealforms textarea{width:435px}
-form.idealforms select,form.idealforms button{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3px;border-radius:3px;padding:.55em 1.5em;cursor:pointer;}
+form.idealforms select,form.idealforms button{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3.01px;border-radius:3.01px;padding:.55em 1.5em;cursor:pointer;}
 form.idealforms select:hover,form.idealforms button:hover{background:-webkit-linear-gradient(#fff, #eaeaea);background:-moz-linear-gradient(#fff, #eaeaea);background:-o-linear-gradient(#fff, #eaeaea);background:-ms-linear-gradient(#fff, #eaeaea);background:linear-gradient(#fff, #eaeaea)}
 form.idealforms select:active,form.idealforms button:active{background:#ddd}
 form.idealforms select:focus,form.idealforms button:focus{outline:none}
@@ -39,7 +39,7 @@ form.idealforms .field.valid .icon{background-position:0 0;cursor:default}
 form.idealforms .field.invalid .group input,form.idealforms .field.valid .group input{border:0;outline:0;-webkit-box-shadow:none;box-shadow:none}
 form.idealforms .field.ajax input{color:#463a09;background:#faf9e8;border-color:#cfaa19}
 form.idealforms .field.ajax .icon{background:url("../img/loading.gif")}
-form.idealforms .error{display:none;position:absolute;z-index:1;left:100%;top:50%;padding:1em 1.5em;width:193.33333333333334px;margin-left:40px;background:#285d85;background:-webkit-linear-gradient(#285d85, #3070a0);background:-moz-linear-gradient(#285d85, #3070a0);background:-o-linear-gradient(#285d85, #3070a0);background:-ms-linear-gradient(#285d85, #3070a0);background:linear-gradient(#285d85, #3070a0);color:#fff;font-size:85%;font-weight:bold;text-shadow:0 1px 0 rgba(0,0,0,0.3);line-height:1.35;border:1px solid #1c425e;-webkit-border-radius:0 3px 3px 3px;border-radius:0 3px 3px 3px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.15);box-shadow:0 1px 1px rgba(0,0,0,0.15);}
+form.idealforms .error{display:none;position:absolute;z-index:1;left:100%;top:50%;padding:1em 1.5em;width:193.33333333333334px;margin-left:40px;background:#285d85;background:-webkit-linear-gradient(#285d85, #3070a0);background:-moz-linear-gradient(#285d85, #3070a0);background:-o-linear-gradient(#285d85, #3070a0);background:-ms-linear-gradient(#285d85, #3070a0);background:linear-gradient(#285d85, #3070a0);color:#fff;font-size:85%;font-weight:bold;text-shadow:0 1px 0 rgba(0,0,0,0.3);line-height:1.35;border:1px solid #1c425e;-webkit-border-radius:0 3.01px 3.01px 3.01px;border-radius:0 3.01px 3.01px 3.01px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.15);box-shadow:0 1px 1px rgba(0,0,0,0.15);}
 form.idealforms .error:after{content:"";position:absolute;z-index:-1;top:-1px;left:-.7em;border-width:.7em;border-style:solid;border-color:transparent;border-top-color:#285d85}
 form.idealforms .idealforms-field-checkbox .icon,form.idealforms .idealforms-field-radio .icon,form.idealforms .idealforms-field-textarea .icon{top:8px;margin-top:0}
 form.idealforms .idealforms-field-checkbox .error,form.idealforms .idealforms-field-radio .error,form.idealforms .idealforms-field-textarea .error{top:1.25em}
@@ -49,7 +49,7 @@ form.idealforms.adaptive .field:after{clear:both}
 form.idealforms.adaptive label.main{display:block;float:none;width:auto;padding-bottom:.5em}
 form.idealforms.adaptive input,form.idealforms.adaptive textarea,form.idealforms.adaptive select,form.idealforms.adaptive .field .group{width:100%}
 form.idealforms.adaptive .field .icon{top:0;margin-top:3.1em}
-form.idealforms.adaptive .error{position:relative;float:left;clear:both;width:100%;left:0;margin-left:0;margin-top:3px;-webkit-border-radius:3px;border-radius:3px;}
+form.idealforms.adaptive .error{position:relative;float:left;clear:both;width:100%;left:0;margin-left:0;margin-top:3px;-webkit-border-radius:3.01px;border-radius:3.01px;}
 form.idealforms.adaptive .error:after{top:2px;left:50%;margin-top:-1.4em;margin-left:-.35em;border-color:transparent;border-bottom-color:#285d85}
 form.idealforms.adaptive .error.hidden{position:absolute;visibility:hidden}
 form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adaptive .idealforms-field-radio .error,form.idealforms.adaptive .idealforms-field-textarea .error{top:0}
@@ -57,7 +57,7 @@ form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adapt
 .idealsteps-step{zoom:1}
 .idealsteps-step:before,.idealsteps-step:after{content:"";display:table}
 .idealsteps-step:after{clear:both}
-.idealsteps-nav{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3px;border-radius:3px;overflow:hidden;margin-bottom:2em;}
+.idealsteps-nav{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3.01px;border-radius:3.01px;overflow:hidden;margin-bottom:2em;}
 .idealsteps-nav ul{margin:0;padding:0;border:0;outline:0;list-style:none}
 .idealsteps-nav li{float:left}
 .idealsteps-nav a{position:relative;float:left;padding:0 1.5em 0 2.75em;height:3.5em;line-height:3.5em;text-decoration:none;color:#5e5e5e;background:#ddd;-webkit-transition:padding 0.2s ease-in-out;-moz-transition:padding 0.2s ease-in-out;-o-transition:padding 0.2s ease-in-out;-ms-transition:padding 0.2s ease-in-out;transition:padding 0.2s ease-in-out;}
@@ -76,8 +76,8 @@ form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adapt
 .idealsteps-container.adaptive .idealsteps-nav li{float:none;overflow:hidden}
 .idealsteps-container.adaptive .idealsteps-nav a,.idealsteps-container.adaptive .idealsteps-nav li:first-child a,.idealsteps-container.adaptive .idealsteps-nav li.idealsteps-step-active a{width:100%;padding:0 2.5em 0 1.5em;border-bottom:1px solid #aaa;border-top:1px solid #f7f7f7;-webkit-border-radius:0;border-radius:0;}
 .idealsteps-container.adaptive .idealsteps-nav a:after,.idealsteps-container.adaptive .idealsteps-nav li:first-child a:after,.idealsteps-container.adaptive .idealsteps-nav li.idealsteps-step-active a:after,.idealsteps-container.adaptive .idealsteps-nav a:before,.idealsteps-container.adaptive .idealsteps-nav li:first-child a:before,.idealsteps-container.adaptive .idealsteps-nav li.idealsteps-step-active a:before{display:none}
-.idealsteps-container.adaptive .idealsteps-nav li:first-child a{-webkit-border-top-left-radius:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;border-top-right-radius:3px;}
-.idealsteps-container.adaptive .idealsteps-nav li:last-child a{-webkit-border-bottom-left-radius:3px;border-bottom-left-radius:3px;-webkit-border-bottom-right-radius:3px;border-bottom-right-radius:3px;}
+.idealsteps-container.adaptive .idealsteps-nav li:first-child a{-webkit-border-top-left-radius:3.01px;border-top-left-radius:3.01px;-webkit-border-top-right-radius:3.01px;border-top-right-radius:3.01px;}
+.idealsteps-container.adaptive .idealsteps-nav li:last-child a{-webkit-border-bottom-left-radius:3.01px;border-bottom-left-radius:3.01px;-webkit-border-bottom-right-radius:3.01px;border-bottom-right-radius:3.01px;}
 .idealsteps-container.adaptive .idealsteps-nav li.idealsteps-step-active a{padding-right:1.5em}
 .idealsteps-container.adaptive .idealsteps-nav .counter{position:relative;float:right;right:0}
 form.idealforms .ideal-radiocheck-label{cursor:pointer;margin:.15em 0 !important;}
@@ -91,8 +91,8 @@ form.idealforms .ideal-radio.focus{background-position:-20px bottom}
 form.idealforms .ideal-radio.checked{background-position:-40px bottom}
 form.idealforms .ideal-radio.checked.focus{background-position:-60px bottom}
 form.idealforms .ideal-file-wrap{float:left}
-form.idealforms .ideal-file-filename{float:left;width:204px;height:100%;-webkit-border-radius:0;border-radius:0;-webkit-border-top-left-radius:3px;border-top-left-radius:3px;-webkit-border-bottom-left-radius:3px;border-bottom-left-radius:3px;}
-form.idealforms .ideal-file-upload{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3px;border-radius:3px;padding:.55em 1.5em;cursor:pointer;overflow:visible;position:relative;float:right;left:-1px;width:87px;padding-left:0;padding-right:0;text-align:center;-webkit-border-radius:0;border-radius:0;-webkit-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;border-bottom-right-radius:3px;}
+form.idealforms .ideal-file-filename{float:left;width:204px;height:100%;-webkit-border-radius:0;border-radius:0;-webkit-border-top-left-radius:3.01px;border-top-left-radius:3.01px;-webkit-border-bottom-left-radius:3.01px;border-bottom-left-radius:3.01px;}
+form.idealforms .ideal-file-upload{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3.01px;border-radius:3.01px;padding:.55em 1.5em;cursor:pointer;overflow:visible;position:relative;float:right;left:-1px;width:87px;padding-left:0;padding-right:0;text-align:center;-webkit-border-radius:0;border-radius:0;-webkit-border-top-right-radius:3.01px;border-top-right-radius:3.01px;-webkit-border-bottom-right-radius:3.01px;border-bottom-right-radius:3.01px;}
 form.idealforms .ideal-file-upload:hover{background:-webkit-linear-gradient(#fff, #eaeaea);background:-moz-linear-gradient(#fff, #eaeaea);background:-o-linear-gradient(#fff, #eaeaea);background:-ms-linear-gradient(#fff, #eaeaea);background:linear-gradient(#fff, #eaeaea)}
 form.idealforms .ideal-file-upload:active{background:#ddd}
 form.idealforms .ideal-file-upload:focus{outline:none}
@@ -100,8 +100,8 @@ form.idealforms.adaptive .ideal-file-wrap{width:100%}
 form.idealforms.adaptive .ideal-file-filename{width:70%}
 form.idealforms.adaptive .ideal-file-upload{width:30%}
 .ideal-file-upload.ie{line-height:1.15}
-.idealforms input.datepicker.open{border-bottom-color:transparent;-webkit-border-radius:0;border-radius:0;-webkit-border-top-left-radius:3px;border-top-left-radius:3px;-webkit-border-top-right-radius:3px;border-top-right-radius:3px;}
-.ui-datepicker{display:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:290px;margin-top:-2px;padding:.75em;background:#fff;border:1px solid #999;-webkit-border-bottom-left-radius:3px;border-bottom-left-radius:3px;-webkit-border-bottom-right-radius:3px;border-bottom-right-radius:3px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);box-shadow:0 1px 2px rgba(0,0,0,0.2)}
+.idealforms input.datepicker.open{border-bottom-color:transparent;-webkit-border-radius:0;border-radius:0;-webkit-border-top-left-radius:3.01px;border-top-left-radius:3.01px;-webkit-border-top-right-radius:3.01px;border-top-right-radius:3.01px;}
+.ui-datepicker{display:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:290px;margin-top:-2px;padding:.75em;background:#fff;border:1px solid #999;-webkit-border-bottom-left-radius:3.01px;border-bottom-left-radius:3.01px;-webkit-border-bottom-right-radius:3.01px;border-bottom-right-radius:3.01px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.2);box-shadow:0 1px 2px rgba(0,0,0,0.2)}
 .ui-datepicker-header{position:relative;padding:.2em 0;margin-bottom:.75em;font-weight:bold;}
 .ui-datepicker-header .ui-datepicker-title{text-align:center}
 .ui-datepicker-header .ui-datepicker-prev,.ui-datepicker-header .ui-datepicker-next{text-indent:-9999px;width:16px;height:16px;position:absolute;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:url("../img/datepicker.png") 0 0;}
@@ -113,4 +113,4 @@ form.idealforms.adaptive .ideal-file-upload{width:30%}
 .ui-datepicker-calendar td{padding:.25em 0;text-align:center}
 .ui-datepicker-calendar a{display:block;text-decoration:none;color:#808080;}
 .ui-datepicker-calendar a:hover{color:#3f9dcc;font-weight:bold}
-.ui-datepicker-calendar .ui-datepicker-today a{margin:0 .25em;background:#eee;-webkit-border-radius:3px;border-radius:3px}
+.ui-datepicker-calendar .ui-datepicker-today a{margin:0 .25em;background:#eee;-webkit-border-radius:3.01px;border-radius:3.01px}
