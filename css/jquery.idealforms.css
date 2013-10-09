@@ -66,7 +66,7 @@ form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adapt
 .idealsteps-nav a:hover:after{border-left-color:#eaeaea}
 .idealsteps-nav a:after,.idealsteps-nav a:before{content:"";position:absolute;z-index:1;top:0;right:-2em;margin-right:0;margin-top:-.125em;border-width:2em 1em;border-style:solid;border-color:transparent;border-left-color:#ddd}
 .idealsteps-nav a:before{margin-right:-1px;border-left-color:#aaa}
-.idealsteps-nav li:first-child a{padding-left:1.75em}
+.idealsteps-nav li:first-child a{padding-left:1.75em;-webkit-border-top-left-radius:3.01px;border-top-left-radius:3.01px;-webkit-border-bottom-left-radius:3.01px;border-bottom-left-radius:3.01px;}
 .idealsteps-nav li.idealsteps-step-active a{padding-right:3.5em;background:#fff;color:#3f9dcc;font-weight:bold;}
 .idealsteps-nav li.idealsteps-step-active a:after{border-left-color:#fff}
 .idealsteps-nav li.idealsteps-step-active .counter{opacity:1;-ms-filter:none;filter:none}
