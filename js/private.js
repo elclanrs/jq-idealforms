@@ -13,15 +13,16 @@ module.exports = {
     this.$fields = $();
     this.$inputs = $();
 
-    this.$form.submit(function(e) {
-      e.preventDefault();
-      self.focusFirstInvalid();
-      self.opts.onSubmit.call(self, self.getInvalid().length, e);
-    });
-
     this._inject('_init');
 
     this.addRules(this.opts.rules || {});
+
+    this.$form.submit(function(e) {
+      e.preventDefault();
+      self._validateAll();
+      self.focusFirstInvalid();
+      self.opts.onSubmit.call(self, self.getInvalid().length, e);
+    });
 
     if (! this.opts.silentLoad) this.focusFirstInvalid();
   },
@@ -55,14 +56,7 @@ module.exports = {
 
     $(input)
       .on('change keyup', function(e) {
-
-        var oldValue = $field.data('idealforms-value');
-
         if (e.which == 9 || e.which == 16) return;
-        if (! $(this).is(':checkbox, :radio') && oldValue == this.value) return;
-
-        $field.data('idealforms-value', this.value);
-
         self._validate(this, true, true);
       })
       .focus(function() {
@@ -125,8 +119,16 @@ module.exports = {
     var self = this
       , $field = this._getField(input)
       , userRules = this.opts.rules[input.name].split($.idealforms.ruleSeparator)
+      , oldValue = $field.data('idealforms-value')
       , valid = true
       , rule;
+
+    // Don't validate input if value hasn't changed
+    if (! $(input).is(':checkbox, :radio') && oldValue == input.value) {
+      return $field.data('idealforms-valid');
+    }
+
+    $field.data('idealforms-value', input.value);
 
     // Non-required input with empty value must pass validation
     if (! input.value && ! this._isRequired(input)) {

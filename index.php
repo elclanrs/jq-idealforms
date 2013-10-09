@@ -35,6 +35,14 @@
     font-size: 130%;
     font-weight: bold;
   }
+
+  .idealforms.adaptive #invalid {
+    margin-left: 0 !important;
+  }
+
+  .idealforms.adaptive .field.buttons label {
+    height: 0;
+  }
 </style>
 </head>
 <body>
@@ -129,7 +137,7 @@
 
             <div class="field buttons">
               <label class="main">&nbsp;</label>
-              <button type="button" class="next">&laquo; Previous</button>
+              <button type="button" class="prev">&laquo; Prev</button>
               <button type="button" class="next">Next &raquo;</button>
             </div>
 
@@ -171,7 +179,7 @@
 
             <div class="field buttons">
               <label class="main">&nbsp;</label>
-              <button type="button" class="next">&laquo; Previous</button>
+              <button type="button" class="prev">&laquo; Prev</button>
               <button type="submit" class="submit">Submit</button>
             </div>
 
