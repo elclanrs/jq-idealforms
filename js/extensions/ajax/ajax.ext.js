@@ -55,6 +55,13 @@ module.exports = {
         $.idealforms._requests[input.name].abort();
         this._getField(input).removeClass('ajax');
       }
+    },
+
+    _validateAll: function(input) {
+      if ($(input).data('idealforms-ajax') && this._getField(input).data('idealforms-valid') === true) {
+        $.idealforms._requests[input.name].abort();
+        this._getField(input).removeClass('ajax');
+      }
     }
 
   }

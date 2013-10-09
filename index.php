@@ -20,18 +20,19 @@
   .content {
     margin: 0 30px;
   }
-  .idealforms .submit {
-    margin: .35em 120px;
+
+  .field.buttons button {
+    margin-right: .5em;
   }
-  .idealforms.adaptive .submit {
-    margin-left: 0;
-  }
+
   #invalid {
     display: none;
     float: left;
-    padding: .25em .75em;
+    width: 290px;
+    margin-left: 120px;
+    margin-top: .5em;
     color: #CC2A18;
-    font-size: 120%;
+    font-size: 130%;
     font-weight: bold;
   }
 </style>
@@ -94,6 +95,11 @@
               <span class="error"></span>
             </div>
 
+            <div class="field buttons">
+              <label class="main">&nbsp;</label>
+              <button type="button" class="next">Next &raquo;</button>
+            </div>
+
           </section>
 
           <!-- Step 2 -->
@@ -119,6 +125,12 @@
                 <label><input name="hobbies[]" type="checkbox" value="dancing">Videogames</label>
               </p>
               <span class="error"></span>
+            </div>
+
+            <div class="field buttons">
+              <label class="main">&nbsp;</label>
+              <button type="button" class="next">&laquo; Previous</button>
+              <button type="button" class="next">Next &raquo;</button>
             </div>
 
           </section>
@@ -157,14 +169,17 @@
               <span class="error"></span>
             </div>
 
+            <div class="field buttons">
+              <label class="main">&nbsp;</label>
+              <button type="button" class="next">&laquo; Previous</button>
+              <button type="submit" class="submit">Submit</button>
+            </div>
+
           </section>
 
         </div>
 
-        <div class="submit">
-          <button type="submit">Submit</button>
-          <span id="invalid"></span>
-        </div>
+        <span id="invalid"></span>
 
       </form>
 
@@ -211,6 +226,15 @@
 
     $('form').idealforms('addRules', {
       'comments': 'required minmax:50:200'
+    });
+
+    $('.prev').click(function(){
+      $('.prev').show();
+      $('form').idealforms('prevStep');
+    });
+    $('.next').click(function(){
+      $('.next').show();
+      $('form').idealforms('nextStep');
     });
 
   </script>

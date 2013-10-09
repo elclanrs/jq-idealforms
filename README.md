@@ -312,7 +312,7 @@ A rule must be in this format `rule:param` where `rule` is the name of the `rule
 - **extension:ext:** Validates file inputs. You can have as many `ext` as you want.
 - **equalto:name:** Must be equal to another field where `name` is the name of the field.
 - **date:format:** Must a valid date in any format. The default is `mm/dd/yyyy` but you can pass any format with any separator, ie. `date:yyyy-mm-dd`.
-- **ajax:** See the built-in [Ajax Extension](#ajax).
+- **ajax:** See the built-in [Ajax Extension](#extension-ajax).
 
 [![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
 
