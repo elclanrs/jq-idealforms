@@ -780,10 +780,9 @@ icon = true // disable icons (must disable in plugin options too)
 icon-size = 16px // must be square icon
 icon-padding = 8px // padding between icon, input and error
 
-radiocheck-sprite = false // `true` to use sprite
+radiocheck-sprite = true // `false` to use css-only style
 radiocheck-size = 18px // size for css-only radiocheck
 group-horizontal = false // group checkbox and radio horizontally
-
 ```
 
 To customize the theme in your CSS file make sure to always add the `form.idealforms` selector so it takes precedence over the default styles, for example, you may change the default label width like:
