@@ -15,9 +15,9 @@ module.exports = {
 
     $inputs.each(function(){ self._buildField(this) });
 
-    this.$inputs = this.$inputs
-      .add($inputs)
-      .each(function(){ self._validate(this, true) });
+    this.$inputs = this.$inputs.add($inputs);
+
+    this._validateAll();
 
     this.$fields.find(this.opts.error).hide();
 

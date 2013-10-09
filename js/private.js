@@ -15,6 +15,7 @@ module.exports = {
 
     this.$form.submit(function(e) {
       e.preventDefault();
+      self._validateAll();
       self.focusFirstInvalid();
       self.opts.onSubmit.call(self, self.getInvalid().length, e);
     });
@@ -169,6 +170,10 @@ module.exports = {
     this._inject('_validate', input, rule, valid);
 
     return valid;
-  }
+  },
 
+  _validateAll: function() {
+    var self = this;
+    this.$inputs.each(function(){ self._validate(this, true) });
+  }
 };
