@@ -154,7 +154,7 @@ User defined errors for added rules. See [Custom Errors](#custom-errors).
 You can get started quickly using Ideal Forms' default markup: 
 
 ```html
-<form class="idealforms" novalidate action="/" method="post">
+<form class="idealforms" novalidate autocomplete="off" action="/" method="post">
 
   <!-- Text -->
   <div class="field">
