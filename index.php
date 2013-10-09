@@ -228,7 +228,7 @@
       }
     });
 
-    $('form').keyup(function() {
+    $('form').find('input, select, textarea').on('change keyup', function() {
       $('#invalid').hide();
     });
 
