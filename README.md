@@ -780,7 +780,8 @@ icon = true // disable icons (must disable in plugin options too)
 icon-size = 16px // must be square icon
 icon-padding = 8px // padding between icon, input and error
 
-radiocheck-sprite = true // `false` for css only style, no sprite (IE9 buggy)
+radiocheck-sprite = false // `true` to use sprite
+radiocheck-size = 18px // size for css-only radiocheck
 group-horizontal = false // group checkbox and radio horizontally
 
 ```

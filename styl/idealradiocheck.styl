@@ -5,7 +5,7 @@ form.idealforms
 
   .ideal-radiocheck-label
     display: inline-block
-    margin: .1em 0 !important
+    padding: .25em 0 !important
     cursor: pointer
 
     if group-horizontal
@@ -50,10 +50,10 @@ form.idealforms
       position: relative
       float: left
       margin-right: 10px !important
-      width: 18px
-      height: 18px
+      width: radiocheck-size
+      height: radiocheck-size
       background: linear-gradient(white, #eee)
-      border: 1px solid #bbb
+      border: 1px solid #aaa
       border-radius: 4px
       box-shadow: 0 1px 1px rgba(black, .2)
       &:after
@@ -68,20 +68,28 @@ form.idealforms
 
     .ideal-check:after, .ideal-radio:after
       content: "×"
+      font-family: Arial, sans-serif
       position: absolute
       left: 50%
-      height: 18px
-      width: 18px
-      line-height: 18px
-      margin-left: -9px
+      width: radiocheck-size
+      margin-left: -(radiocheck-size/2)
+      line-height: radiocheck-size
       text-align: center
-      font-size: 20px
+      font-size: radiocheck-size
       color: #888
       text-shadow: 1px 1px 0 white
 
     .ideal-radio:after
-      content: "•"
-      font-size: 22px
+      size = (radiocheck-size/4)
+      content: ""
+      height: size
+      width: size
+      top: 50%
+      left: 50%
+      margin-top: -(size/2)
+      margin-left: -(size/2)
+      border-radius: size
+      background: #888
 
     .ideal-check.checked
     .ideal-check.checked.focus
