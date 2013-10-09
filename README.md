@@ -7,6 +7,8 @@ The best forms just got better! Ideal Forms 3 is smaller, faster, and more exten
 **Website:** http://bit.ly/GFrp55 (not always in sync)  
 **Demo only:** http://bit.ly/1ahZalu
 
+[![poll](http://i.imgur.com/owzILTE.jpg)](http://www.poll-maker.com/poll35581x6a874483-2)
+
 ### Features
 - On the spot validation
 - Fully adaptive (adapts to the container, no css media queries needed)
