@@ -44,7 +44,7 @@
 
       <nav class="idealsteps-nav"></nav>
 
-      <form action="" novalidate class="idealforms">
+      <form action="" novalidate autocomplete="off" class="idealforms">
 
         <div class="idealsteps-wrap">
 
@@ -201,7 +201,7 @@
       },
 
       onSubmit: function(invalid) {
-        $('#invalid').show().text(invalid ? (invalid +' invalid fields') : 'All good!')
+        $('#invalid').show().text(invalid ? (invalid +' invalid fields') : 'All good!');
       }
     });
 
