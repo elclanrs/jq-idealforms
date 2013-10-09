@@ -65,6 +65,7 @@ module.exports = {
     if (this.getInvalid().find($target).length) return false;
 
     $target.off('keyup.equalto').on('keyup.equalto', function() {
+      self._getField(input).removeData('idealforms-value');
       self._validate(input, false, true);
     });
 
