@@ -51,7 +51,7 @@ module.exports = {
       , valid = false;
 
     $.each(input.files || [{name: input.value}], function(i, file) {
-      valid = $.inArray(file.name.match(/\.(.+)$/)[1], extensions) > -1;
+      valid = $.inArray(file.name.match(/\.(.+)$/)[1].toLowerCase(), extensions) > -1;
     });
 
     return valid;
