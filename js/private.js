@@ -16,7 +16,7 @@ module.exports = {
     this.$form.submit(function(e) {
       e.preventDefault();
       self.focusFirstInvalid();
-      self.opts.onSubmit.call(this, self.getInvalid().length, e);
+      self.opts.onSubmit.call(self, self.getInvalid().length, e);
     });
 
     this._inject('_init');
