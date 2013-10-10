@@ -30,7 +30,7 @@ $.idealforms.i18n.es = {
     maxoption: 'No puede haber más de {0} opciones seleccionadas',
     minmax: 'Debe contener al menos {0} pero no más de {1} caracteres',
     select: 'Selecciona una option',
-    extension: 'Los ficheros deben tener una extensión válida',
+    extension: 'Los ficheros deben tener una extensión válida ({*})',
     equalto: 'Debe ser idéntico a <strong>"{0}"</strong>',
     date: 'Debe ser una fecha válida {0}',
     ajax: 'Cargando...'

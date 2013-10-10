@@ -366,7 +366,7 @@ $('form').idealforms({
 });
 ```
 
-### Extension: Dynamic Fields
+### Extension - Dynamic Fields
 
 **Name:** `dynamicFields`
 
@@ -497,7 +497,7 @@ $('form').idealforms('toggleFields', 'username password hobbies[]');
 
 Dynamic Fields adds injection points for `addFields`, `removeFields` and `toggleFields`. Read about [custom extensions](#custom-extensions) for more info.
 
-### Extension: Steps  
+### Extension - Steps  
 
 **Name:** `steps`
 
@@ -597,7 +597,7 @@ Steps adds the `appendToStep:index` option to `addFields`:
 $('form').addFields({ 'field': { type: 'text', label: 'Field', appendToStep: 1 }});
 ```
 
-### Extension: Custom Inputs
+### Extension - Custom Inputs
 
 Adds custom checkboxes, radios and file inputs (yes!) seamlessly. The custom select menu has been dropped from Ideal Forms 3; it was proving to be a pain to maintain, and there are much better alternatives, such as [Select2](http://ivaynberg.github.io/select2/) if you need them.
 
@@ -605,7 +605,7 @@ Adds custom checkboxes, radios and file inputs (yes!) seamlessly. The custom sel
 
 This extension has no additional options or methods.
 
-### Extension: Ajax
+### Extension - Ajax
 
 **Name:** `ajax`
 
@@ -640,7 +640,7 @@ echo json_encode(true);
 
 If the response gets delayed the field will switch into "ajax mode" by showing a loading icon until the response comes back.
 
-### Extension: Datepicker
+### Extension - Datepicker
 
 **Name:** `datepicker`
 
@@ -671,7 +671,7 @@ $('form').idealforms({
 
 $('.datepicker').datepicker('option', 'dateFormat', 'yy-mm-dd');
 ```
-### Extension: Adaptive
+### Extension - Adaptive
 
 **Name:** `adaptive`
 
@@ -772,18 +772,11 @@ _init: function() {
 
 ## Localization
 
-To localize Ideal Forms load the corresponding i18n file from `js/i18n` **after** the plugin and pass the `i18n` option:
+To localize Ideal Forms load the corresponding i18n file from `js/i18n` **after** the plugin:
 
 ```html
 <script src="jquery.idealforms.js"></script>
 <script src="jquery.idealforms.i18n.es.js"></script>
-
-<script>
-  $('form').idealforms({
-    i18n: 'es',
-    ...
-  });
-</script>
 ```
 
 Creating your own locale file:

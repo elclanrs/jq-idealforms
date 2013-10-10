@@ -34,18 +34,20 @@ module.exports = {
 
   _i18n: function() {
 
-    if (this.opts.i18n == 'en') return;
+    var self = this;
 
-    var lang = $.idealforms.i18n[this.opts.i18n]
-      , errors = lang.errors
-      , options = {};
+    $.each($.idealforms.i18n, function(locale, lang) {
 
-    delete lang.errors;
+      var errors = lang.errors
+        , options = {};
 
-    for (var ext in lang) options[ext] = { i18n: lang[ext] };
+      delete lang.errors;
 
-    $.extend($.idealforms.errors, errors);
-    $.extend(true, this.opts, options);
+      for (var ext in lang) options[ext] = { i18n: lang[ext] };
+
+      $.extend($.idealforms.errors, errors);
+      $.extend(true, self.opts, options);
+    });
   },
 
   _buildField: function(input) {

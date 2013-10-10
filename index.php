@@ -201,7 +201,7 @@
   <!--<script src="js/out/jquery.idealforms.min.js"></script>-->
   <script>
 
-    $('form').idealforms({
+    $('form.idealforms').idealforms({
 
       rules: {
         'username': 'required username ajax',
@@ -228,21 +228,21 @@
       }
     });
 
-    $('form').find('input, select, textarea').on('change keyup', function() {
+    $('form.idealforms').find('input, select, textarea').on('change keyup', function() {
       $('#invalid').hide();
     });
 
-    $('form').idealforms('addRules', {
+    $('form.idealforms').idealforms('addRules', {
       'comments': 'required minmax:50:200'
     });
 
     $('.prev').click(function(){
       $('.prev').show();
-      $('form').idealforms('prevStep');
+      $('form.idealforms').idealforms('prevStep');
     });
     $('.next').click(function(){
       $('.next').show();
-      $('form').idealforms('nextStep');
+      $('form.idealforms').idealforms('nextStep');
     });
 
   </script>
