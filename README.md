@@ -16,7 +16,7 @@ The best forms just got better! Ideal Forms 3 is smaller, faster, and more exten
 - Custom checkboxes, radios and file inputs
 - Custom seamless jQuery UI datepicker
 - Support for third party extensions
-- Localization (todo)
+- Localization
 
 ### Major changes since version 2
 
@@ -33,7 +33,7 @@ Ideal Forms 3 is **not** compatible with version 2. You can still find Ideal For
 
 ### TODO
 
-- i18n
+- Bring back other languages to Ideal Forms 3
 
 ## Table of Contents
 
@@ -54,6 +54,7 @@ Ideal Forms 3 is **not** compatible with version 2. You can still find Ideal For
     - [Adaptive](#extension-adaptive)
 - [Custom Rules](#custom-rules)
 - [Custom Extensions](#custom-extensions)
+- [Localization](#localization)
 - [Themes](#themes)
 - [FAQ](#faq)
 - [Build & Share](#build--share)
@@ -84,6 +85,7 @@ $('form').idealforms({ options });
 
 ```javascript
 defaults = {
+  i18n: 'en',
   field: '.field',
   error: '.error',
   iconHtml: '<i/>',
@@ -97,6 +99,10 @@ defaults = {
   errors: {}
 }
 ```
+
+### i18n
+
+Localize Ideal Forms. See [Localization](#localization).
 
 ### field
 
@@ -320,7 +326,7 @@ A rule must be in this format `rule:param` where `rule` is the name of the `rule
 
 To call a method run `idealforms` on the form and pass the method and arguments:
 
-```javascript
+```javascript`
 $('form').idealforms('method', arg1, arg2, ...);
 ```
 
@@ -722,7 +728,7 @@ To add a custom extension provide a `name`, extended `options` and extended `met
 - **focusFirstInvalid:** Inject code when the first input is focused.
 - **reset(name):** Reset the form. `name` is an input name, if any. Check the [reset](#idealformsreset-name) method.
 
-It is recommended that you always namespace your extension, by prefixing it with a unique identifier:
+It is recommended that you always namespace your extension, by prefixing it with a unique identifier. To allow for Ideal Forms localization, add the `i18n` option and all the strings that may change inside, then build your extension with localization in mind:
 
 ```javascript
 $.idealforms.addExtension({
@@ -730,14 +736,19 @@ $.idealforms.addExtension({
   name: 'MY_extensionName',
   
   options: {
-    MY_option: 'default'  
+    MY_extension: {
+      option: 'default',
+      i18n: {
+        initialized: 'Initialized'
+      }
+    }
   },
   
   methods: {
     
     // @extend
     _init: function() {
-    
+      console.log(this.opts.i18n.initialized +'!');
     },
     
     MY_newMethod: function() {
@@ -758,6 +769,50 @@ _init: function() {
 ```
 
 [![TOC](http://i.imgur.com/RDbarNr.png)](#table-of-contents)
+
+## Localization
+
+To localize Ideal Forms load the corresponding i18n file from `js/i18n` **after** the plugin and pass the `i18n` option:
+
+```html
+<script src="jquery.idealforms.js"></script>
+<script src="jquery.idealforms.i18n.es.js"></script>
+
+<script>
+  $('form').idealforms({
+    i18n: 'es',
+    ...
+  });
+</script>
+```
+
+Creating your own locale file:
+
+```javascript
+/**
+ * i18n ES
+ */
+$.idealforms.i18n.es = {
+
+  customInputs: {
+    open: 'Abrir'
+  },
+  
+  steps: {
+    step: 'Paso'
+  },
+
+  errors: {
+    required: 'Este campo es obligatorio',
+    digits: 'Debe contener sólo cifras',
+    name: 'Debe contener al menos 3 caracteres y contener únicamente letras',
+    ...
+  }
+};
+
+```
+
+External plugins like the jQuery UI datepicker have to be localized separately in their own way.
 
 ## Themes
 

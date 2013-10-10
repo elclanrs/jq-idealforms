@@ -7,11 +7,13 @@ module.exports = {
 
     var self = this;
 
-    this._extend($.idealforms.extensions);
-
     this.$form = $(this.el);
     this.$fields = $();
     this.$inputs = $();
+
+    this._extend($.idealforms.extensions);
+
+    this._i18n();
 
     this._inject('_init');
 
@@ -25,6 +27,22 @@ module.exports = {
     });
 
     if (! this.opts.silentLoad) this.focusFirstInvalid();
+  },
+
+  _i18n: function() {
+
+    if (this.opts.i18n == 'en') return;
+
+    var lang = $.idealforms.i18n[this.opts.i18n]
+      , errors = lang.errors
+      , options = {};
+
+    delete lang.errors;
+
+    for (var ext in lang) options[ext] = { i18n: lang[ext] };
+
+    $.extend($.idealforms.errors, errors);
+    $.extend(true, this.opts, options);
   },
 
   _buildField: function(input) {

@@ -11,6 +11,7 @@
   plugin.name = 'idealforms';
 
   plugin.defaults = {
+    i18n: 'en',
     field: '.field',
     error: '.error',
     iconHtml: '<i/>',
@@ -38,6 +39,8 @@
         return a && a[b];
       }, obj);
     },
+
+    i18n: {},
 
     ruleSeparator: ' ',
     argSeparator: ':',

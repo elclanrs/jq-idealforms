@@ -5,19 +5,25 @@ module.exports = {
   name: 'steps',
 
   options: {
+
     steps: {
+
       container: '.idealsteps-container',
       nav: '.idealsteps-nav',
       navItems: 'li',
       buildNavItems: function(i) {
-        return 'Step '+ (i+1);
+        return this.opts.steps.i18n.step +' '+ (i+1);
       },
       wrap: '.idealsteps-wrap',
       step: '.idealsteps-step',
       activeClass: 'idealsteps-step-active',
       before: null,
       after: null,
-      fadeSpeed: 0
+      fadeSpeed: 0,
+
+      i18n: {
+        step: 'Step'
+      }
     }
   },
 

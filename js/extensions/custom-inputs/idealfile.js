@@ -10,6 +10,10 @@
 
   plugin.name = 'idealfile';
 
+  plugin.defaults = {
+    open: 'Open'
+  };
+
   plugin.methods = {
 
     _init: function() {
@@ -18,9 +22,9 @@
         , $wrap = $('<div class="ideal-file-wrap">')
         , $input = $('<input type="text" class="ideal-file-filename" />')
           // Button that will be used in non-IE browsers
-        , $button = $('<button type="button" class="ideal-file-upload">Open</button>')
+        , $button = $('<button type="button" class="ideal-file-upload">'+ this.opts.open +'</button>')
           // Hack for IE
-        , $label = $('<label class="ideal-file-upload" for="' + $file[0].id + '">Open</label>');
+        , $label = $('<label class="ideal-file-upload" for="' + $file[0].id + '">'+ this.opts.open +'</label>');
 
       if (isIE) $label.add($button).addClass('ie');
 

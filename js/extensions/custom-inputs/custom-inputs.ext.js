@@ -5,6 +5,14 @@ module.exports = {
 
   name: 'customInputs',
 
+  options: {
+    customInputs: {
+      i18n: {
+        open: 'Open'
+      }
+    }
+  },
+
   methods: {
 
     // @extend
@@ -17,7 +25,7 @@ module.exports = {
     },
 
     _buildCustomInputs: function() {
-      this.$form.find(':file').idealfile();
+      this.$form.find(':file').idealfile(this.opts.customInputs.i18n);
       this.$form.find(':checkbox, :radio').idealradiocheck();
     }
 

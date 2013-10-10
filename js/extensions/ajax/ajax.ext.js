@@ -9,9 +9,7 @@ module.exports = {
 
       $.extend($.idealforms, { _requests: {} });
 
-      $.extend($.idealforms.errors, {
-        ajax: 'Loading...'
-      });
+      $.idealforms.errors.ajax = $.idealforms.errors.ajax || 'Loading...';
 
       $.extend($.idealforms.rules, {
 
