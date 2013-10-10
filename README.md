@@ -906,6 +906,10 @@ This instructions have only been tested on Ubuntu, but you should be able to com
 
 ## Update History
 
+#### 09/10/13
+
+- Localization!
+
 #### 07/10/13
 - Alternative scalable radiocheck style without sprites
 
