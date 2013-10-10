@@ -153,7 +153,7 @@ module.exports = {
       $field.removeData('idealforms-valid');
       this._fresh(input);
 
-    // Required inputs
+    // Inputs with value or required
     } else {
 
       $.each(userRules, function(i, userRule) {
