@@ -38,7 +38,7 @@ module.exports = {
       this._handleError(firstInvalid);
       this._handleStyle(firstInvalid);
       this._inject('focusFirstInvalid', firstInvalid);
-      firstInvalid.focus();
+      $(firstInvalid).focus();
     }
   },
 

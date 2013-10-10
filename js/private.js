@@ -26,7 +26,10 @@ module.exports = {
       self.opts.onSubmit.call(self, self.getInvalid().length, e);
     });
 
-    if (! this.opts.silentLoad) this.focusFirstInvalid();
+    if (! this.opts.silentLoad) {
+      // 1ms timeout to make sure error shows up
+      setTimeout($.proxy(this.focusFirstInvalid, this), 1);
+    }
   },
 
   _i18n: function() {
@@ -78,10 +81,7 @@ module.exports = {
         self._validate(this, true, true);
       })
       .focus(function() {
-
-        if (self.isValid(this.name)) return false;
-
-        if (self._isRequired(this) || this.value) {
+        if (! self.isValid(this.name)) {
           $field.find(self.opts.error).show();
         }
       })
