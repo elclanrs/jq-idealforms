@@ -65,6 +65,7 @@ Ideal Forms 3 is **not** compatible with version 2. You can still find Ideal For
 - Load latest [jQuery](http://code.jquery.com/jquery-2.0.3.min.js) library
 - Load `css/jquery.idealforms.css` stylesheet
 - Load `js/out/jquery.idealforms.min.js` plugin
+- To localize Ideal Forms load the corresponding file from `js/i18n`. See [Localization](#localization).
 - Place images in a folder and make sure the [path is correct](#why-the-icons-dont-show-up)
 - For better IE support, replace the opening `html` tag with:
 
@@ -85,7 +86,6 @@ $('form').idealforms({ options });
 
 ```javascript
 defaults = {
-  i18n: 'en',
   field: '.field',
   error: '.error',
   iconHtml: '<i/>',
@@ -102,7 +102,7 @@ defaults = {
 
 ### i18n
 
-Localize Ideal Forms. See [Localization](#localization).
+
 
 ### field
 
@@ -366,7 +366,7 @@ $('form').idealforms({
 });
 ```
 
-### Extension - Dynamic Fields
+### Extension: Dynamic Fields
 
 **Name:** `dynamicFields`
 
@@ -497,7 +497,7 @@ $('form').idealforms('toggleFields', 'username password hobbies[]');
 
 Dynamic Fields adds injection points for `addFields`, `removeFields` and `toggleFields`. Read about [custom extensions](#custom-extensions) for more info.
 
-### Extension - Steps  
+### Extension: Steps  
 
 **Name:** `steps`
 
@@ -597,7 +597,7 @@ Steps adds the `appendToStep:index` option to `addFields`:
 $('form').addFields({ 'field': { type: 'text', label: 'Field', appendToStep: 1 }});
 ```
 
-### Extension - Custom Inputs
+### Extension: Custom Inputs
 
 Adds custom checkboxes, radios and file inputs (yes!) seamlessly. The custom select menu has been dropped from Ideal Forms 3; it was proving to be a pain to maintain, and there are much better alternatives, such as [Select2](http://ivaynberg.github.io/select2/) if you need them.
 
@@ -605,7 +605,7 @@ Adds custom checkboxes, radios and file inputs (yes!) seamlessly. The custom sel
 
 This extension has no additional options or methods.
 
-### Extension - Ajax
+### Extension: Ajax
 
 **Name:** `ajax`
 
@@ -640,7 +640,7 @@ echo json_encode(true);
 
 If the response gets delayed the field will switch into "ajax mode" by showing a loading icon until the response comes back.
 
-### Extension - Datepicker
+### Extension: Datepicker
 
 **Name:** `datepicker`
 
@@ -671,7 +671,7 @@ $('form').idealforms({
 
 $('.datepicker').datepicker('option', 'dateFormat', 'yy-mm-dd');
 ```
-### Extension - Adaptive
+### Extension: Adaptive
 
 **Name:** `adaptive`
 
