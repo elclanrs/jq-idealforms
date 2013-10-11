@@ -48,7 +48,7 @@ form.idealforms.adaptive .field:before,form.idealforms.adaptive .field:after{con
 form.idealforms.adaptive .field:after{clear:both}
 form.idealforms.adaptive label.main{display:block;float:none;width:auto;padding-bottom:.5em}
 form.idealforms.adaptive input,form.idealforms.adaptive textarea,form.idealforms.adaptive select,form.idealforms.adaptive .field .group{width:100%}
-form.idealforms.adaptive .field .icon{top:0;margin-top:3.1em}
+form.idealforms.adaptive .field .icon{top:0;margin-top:3.2em}
 form.idealforms.adaptive .error{position:relative;float:left;clear:both;width:100%;left:0;margin-left:0;margin-top:3px;-webkit-border-radius:3.01px;border-radius:3.01px;}
 form.idealforms.adaptive .error:after{top:2px;left:50%;margin-top:-1.4em;margin-left:-.35em;border-color:transparent;border-bottom-color:#285d85}
 form.idealforms.adaptive .error.hidden{position:absolute;visibility:hidden}

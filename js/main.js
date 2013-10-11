@@ -11,7 +11,6 @@
   plugin.name = 'idealforms';
 
   plugin.defaults = {
-    i18n: 'en',
     field: '.field',
     error: '.error',
     iconHtml: '<i/>',
