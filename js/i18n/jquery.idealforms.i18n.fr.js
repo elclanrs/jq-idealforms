@@ -12,7 +12,6 @@ $.idealforms.i18n.fr = {
   },
 
   errors: {
-
     required: 'Ce champ est obligatoire',
     digits: 'Veuillez fournir seulement des chiffres',
     name: 'Veuillez fournir au moins 3 caractères et seulment des lettres',

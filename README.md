@@ -40,6 +40,7 @@ Ideal Forms 3 is **not** compatible with version 2. You can still find Ideal For
 - [Setup](#setup)
 - [Options](#options)
 - [Markup](#markup)
+    - [Markup with Rules](#markup-with-rules)
     - [Custom Markup](#custom-markup)
 - [Adding Rules](#adding-rules)
     - [Custom Errors](#custom-errors)
@@ -215,6 +216,36 @@ You can get started quickly using Ideal Forms' default markup:
   
   <!-- Button -->
   <button type="submit">Submit</button>
+  
+</form>
+```
+
+### Markup with Rules
+
+You can build simple forms by adding the rules to the markup, using the `data-idealforms-rules` attribute:
+
+```html
+<form class="idealforms" novalidate autocomplete="off" action="/" method="post">
+
+  <!-- Single -->
+  <div class="field">
+    <label class="main">Username:</label>
+    <input name="username" type="text" data-idealforms-rules="required username">
+    <span class="error"></span>
+  </div>
+  
+  <!-- Group
+  On inputs that share the same name,
+  you only need to add the rules on the first one -->
+  <div class="field">
+    <label class="main">Hobbies:</label>
+    <p class="group">
+      <label><input name="group[]" type="checkbox" value="A" data-idealforms-rules="minoption:1 maxoption:2">A</label>
+      <label><input name="group[]" type="checkbox" value="B">B</label>
+      <label><input name="group[]" type="checkbox" value="C">C</label>
+    </p>
+    <span class="error"></span>
+  </div>
   
 </form>
 ```

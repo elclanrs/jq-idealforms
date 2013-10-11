@@ -12,11 +12,11 @@ module.exports = {
     this.$inputs = $();
 
     this._extend($.idealforms.extensions);
-
     this._i18n();
 
     this._inject('_init');
 
+    this._addMarkupRules();
     this.addRules(this.opts.rules || {});
 
     this.$form.submit(function(e) {
@@ -30,6 +30,18 @@ module.exports = {
       // 1ms timeout to make sure error shows up
       setTimeout($.proxy(this.focusFirstInvalid, this), 1);
     }
+  },
+
+  _addMarkupRules: function() {
+
+    var rules = {};
+
+    this.$form.find('input, select, textarea').each(function() {
+      var rule = $(this).data('idealforms-rules');
+      if (rule && ! rules[this.name]) rules[this.name] = rule;
+    });
+
+    this.addRules(rules);
   },
 
   _i18n: function() {
