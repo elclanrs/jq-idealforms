@@ -58,7 +58,7 @@ module.exports = {
       return this.defaultSelected;
     });
 
-    $inputs.change().each(function(){ self._resetErrorAndStyle(this) });
+    $inputs.change().each(function(){ self._fresh(this) });
 
     this._inject('reset', name);
   }
