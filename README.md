@@ -100,10 +100,6 @@ defaults = {
 }
 ```
 
-### i18n
-
-
-
 ### field
 
 The field container for [custom markup](#custom-markup).
