@@ -144,6 +144,22 @@ Callback that runs when the form is submitted.
 - **invalid:** The number of invalid fields if any.
 - **event:** The submit event (prevented by default).
 
+For Example:
+
+```javascript
+$('form').idealforms({
+  onSubmit: function(invalid) {
+    if (invalid) {
+      alert(invalid +' fields!');
+    } else {
+      $.post('save.php', this.$form.serialize(), function(response) {  
+        // do something with response
+      }, 'json');
+    }    
+  }
+});
+```
+
 ### rules
 
 Field rules. See [Adding Rules](#adding-rules).
