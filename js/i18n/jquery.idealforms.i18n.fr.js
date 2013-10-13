@@ -18,7 +18,7 @@ $.idealforms.i18n.fr = {
     email: 'Veuillez fournir une adresse électronique valide',
     username: 'Veuillez fournir entre 4 et 32 caractères et commencer par une lettre. Vous pouvez utiliser des lettres, des numéros, des tirets et un point.',
     pass: 'Veuillez fournir au moins 6 caractères, un numéro, une lettre majuscule et une minuscule',
-    strongpass: 'Veuillez fournir au moins 8 caractères, une lettre majuscule, une minuscule et une numero ou caractère special',
+    strongpass: 'Veuillez fournir au moins 8 caractères, une lettre majuscule, une minuscule et une numéro ou caractère special',
     phone: 'Veuillez fournir une numéro de téléphone valide',
     zip: 'Veuillez fournir un code postal',
     url: 'Veuillez fournir une adresse URL valide',
