@@ -54,7 +54,7 @@ form.idealforms.adaptive .error:after{top:2px;left:50%;margin-top:-1.4em;margin-
 form.idealforms.adaptive .error.hidden{position:absolute;visibility:hidden}
 form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adaptive .idealforms-field-radio .error,form.idealforms.adaptive .idealforms-field-textarea .error{top:0}
 .idealsteps-container *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-.idealsteps-step{zoom:1}
+.idealsteps-step{display:none;zoom:1}
 .idealsteps-step:before,.idealsteps-step:after{content:"";display:table}
 .idealsteps-step:after{clear:both}
 .idealsteps-nav{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3.01px;border-radius:3.01px;overflow:hidden;margin-bottom:2em;}
@@ -67,7 +67,7 @@ form.idealforms.adaptive .idealforms-field-checkbox .error,form.idealforms.adapt
 .idealsteps-nav a:after,.idealsteps-nav a:before{content:"";position:absolute;z-index:1;top:0;right:-2em;margin-right:0;margin-top:-.125em;border-width:2em 1em;border-style:solid;border-color:transparent;border-left-color:#ddd}
 .idealsteps-nav a:before{margin-right:-1px;border-left-color:#aaa}
 .idealsteps-nav li:first-child a{padding-left:1.75em;-webkit-border-top-left-radius:3.01px;border-top-left-radius:3.01px;-webkit-border-bottom-left-radius:3.01px;border-bottom-left-radius:3.01px;}
-.idealsteps-nav li.idealsteps-step-active a{padding-right:3.5em;background:#fff;color:#3f9dcc;font-weight:bold;}
+.idealsteps-nav li.idealsteps-step-active a{padding-right:3.5em;background:#fff;color:#3f9dcc;font-weight:bold;cursor:default;}
 .idealsteps-nav li.idealsteps-step-active a:after{border-left-color:#fff}
 .idealsteps-nav li.idealsteps-step-active .counter{opacity:1;-ms-filter:none;filter:none}
 .idealsteps-nav .counter{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);position:absolute;top:50%;right:1em;height:1.5em;width:1.5em;margin-top:-.75em;line-height:1.5 !important;text-align:center;color:#cc2a18;border:1px solid #cc2a18;-webkit-border-radius:10em;border-radius:10em;-webkit-transition:opacity 0.2s ease-in-out;-moz-transition:opacity 0.2s ease-in-out;-o-transition:opacity 0.2s ease-in-out;-ms-transition:opacity 0.2s ease-in-out;transition:opacity 0.2s ease-in-out;}

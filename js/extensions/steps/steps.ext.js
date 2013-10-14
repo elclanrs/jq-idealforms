@@ -17,8 +17,8 @@ module.exports = {
       wrap: '.idealsteps-wrap',
       step: '.idealsteps-step',
       activeClass: 'idealsteps-step-active',
-      before: null,
-      after: null,
+      before: $.noop,
+      after: $.noop,
       fadeSpeed: 0,
 
       i18n: {

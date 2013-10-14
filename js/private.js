@@ -20,7 +20,6 @@ module.exports = {
     this.addRules(this.opts.rules || {});
 
     this.$form.submit(function(e) {
-      e.preventDefault();
       self._validateAll();
       self.focusFirstInvalid();
       self.opts.onSubmit.call(self, self.getInvalid().length, e);

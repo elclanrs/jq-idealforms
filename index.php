@@ -223,10 +223,17 @@
         }
       },
 
-      onSubmit: function(invalid) {
+      onSubmit: function(invalid, e) {
+        e.preventDefault();
         $('#invalid').show().text(invalid ? (invalid +' invalid fields') : 'All good!');
+      },
+
+      steps: {
+        fadeSpeed: 300
       }
     });
+
+
 
     $('form.idealforms').find('input, select, textarea').on('change keyup', function() {
       $('#invalid').hide();

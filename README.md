@@ -142,13 +142,15 @@ Callback that runs after an input attempts to validate.
 Callback that runs when the form is submitted.
 
 - **invalid:** The number of invalid fields if any.
-- **event:** The submit event (prevented by default).
+- **event:** The submit event.
 
-For Example:
+Example:
 
 ```javascript
 $('form').idealforms({
-  onSubmit: function(invalid) {
+  onSubmit: function(invalid, e) {
+    e.preventDefault();
+    
     if (invalid) {
       alert(invalid +' fields!');
     } else {

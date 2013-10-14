@@ -14,8 +14,8 @@
     wrap: '.idealsteps-wrap',
     step: '.idealsteps-step',
     activeClass: 'idealsteps-step-active',
-    before: null,
-    after: null,
+    before: $.noop,
+    after: $.noop,
     fadeSpeed: 0
   };
 
@@ -41,7 +41,9 @@
 
       this.$navItems.click(function(e) {
         e.preventDefault();
-        self.go(self.$navItems.index(this));
+        if (! $(this).is('.'+ self.opts.activeClass)) {
+          self.go(self.$navItems.index(this));
+        }
       });
     },
 
@@ -75,12 +77,12 @@
       if (idx >= this.$steps.length) idx = 0;
       if (idx < 0) idx = this.$steps.length-1;
 
-      if (this.opts.before) this.opts.before.call(this, idx);
+      this.opts.before.call(this, idx);
 
       this.$navItems.removeClass(active).eq(idx).addClass(active);
-      this.$steps.fadeOut(fadeSpeed).eq(idx).fadeIn(fadeSpeed);
+      this.$steps.hide().eq(idx).fadeIn(fadeSpeed);
 
-      if (this.opts.after) this.opts.after.call(this, idx);
+      this.opts.after.call(this, idx);
     },
 
     prev: function() {
