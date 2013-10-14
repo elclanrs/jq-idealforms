@@ -203,6 +203,8 @@
 
     $('form.idealforms').idealforms({
 
+      silentLoad: false,
+
       rules: {
         'username': 'required username ajax',
         'email': 'required email',
@@ -225,7 +227,10 @@
 
       onSubmit: function(invalid, e) {
         e.preventDefault();
-        $('#invalid').show().text(invalid ? (invalid +' invalid fields') : 'All good!');
+        $('#invalid')
+          .show()
+          .toggleClass('valid', ! invalid)
+          .text(invalid ? (invalid +' invalid fields') : 'All good!');
       },
 
       steps: {

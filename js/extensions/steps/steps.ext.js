@@ -58,6 +58,8 @@ module.exports = {
           return $(this).find(firstInvalid).length;
         }).index();
       });
+
+      setTimeout(function(){ $(firstInvalid).focus() }, this.opts.steps.fadeSpeed);
     },
 
     _buildSteps: function() {
