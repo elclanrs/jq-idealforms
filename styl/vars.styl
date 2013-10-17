@@ -47,9 +47,12 @@ idealbutton()
   &:hover
     background: linear-gradient(lighten(ui-element, 20), lighten(ui-element, 5))
 
-  &:active
+  &:active, &:active:focus
+    ui()
     background: ui-element
 
   &:focus
     outline: none
+    border-color: valid
+    box-shadow: 0 0 1px valid
 

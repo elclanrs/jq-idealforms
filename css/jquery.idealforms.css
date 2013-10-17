@@ -17,8 +17,8 @@ form.idealforms input{-webkit-transition:background 0.3s ease-in-out;-moz-transi
 form.idealforms textarea{width:435px}
 form.idealforms select,form.idealforms button{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3.01px;border-radius:3.01px;padding:.55em 1.5em;cursor:pointer;}
 form.idealforms select:hover,form.idealforms button:hover{background:-webkit-linear-gradient(#fff, #eaeaea);background:-moz-linear-gradient(#fff, #eaeaea);background:-o-linear-gradient(#fff, #eaeaea);background:-ms-linear-gradient(#fff, #eaeaea);background:linear-gradient(#fff, #eaeaea)}
-form.idealforms select:active,form.idealforms button:active{background:#ddd}
-form.idealforms select:focus,form.idealforms button:focus{outline:none}
+form.idealforms select:active,form.idealforms button:active,form.idealforms select:active:focus,form.idealforms button:active:focus{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3.01px;border-radius:3.01px;background:#ddd}
+form.idealforms select:focus,form.idealforms button:focus{outline:none;border-color:#3f9dcc;-webkit-box-shadow:0 0 1px #3f9dcc;box-shadow:0 0 1px #3f9dcc}
 form.idealforms button{width:auto}
 form.idealforms select{padding:.55em;}
 form.idealforms select:focus{border:1px solid #444}
@@ -94,8 +94,8 @@ form.idealforms .ideal-file-wrap{float:left}
 form.idealforms .ideal-file-filename{float:left;width:204px;height:100%;-webkit-border-radius:0;border-radius:0;-webkit-border-top-left-radius:3.01px;border-top-left-radius:3.01px;-webkit-border-bottom-left-radius:3.01px;border-bottom-left-radius:3.01px;}
 form.idealforms .ideal-file-upload{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3.01px;border-radius:3.01px;padding:.55em 1.5em;cursor:pointer;overflow:visible;position:relative;float:right;left:-1px;width:87px;padding-left:0;padding-right:0;text-align:center;-webkit-border-radius:0;border-radius:0;-webkit-border-top-right-radius:3.01px;border-top-right-radius:3.01px;-webkit-border-bottom-right-radius:3.01px;border-bottom-right-radius:3.01px;}
 form.idealforms .ideal-file-upload:hover{background:-webkit-linear-gradient(#fff, #eaeaea);background:-moz-linear-gradient(#fff, #eaeaea);background:-o-linear-gradient(#fff, #eaeaea);background:-ms-linear-gradient(#fff, #eaeaea);background:linear-gradient(#fff, #eaeaea)}
-form.idealforms .ideal-file-upload:active{background:#ddd}
-form.idealforms .ideal-file-upload:focus{outline:none}
+form.idealforms .ideal-file-upload:active,form.idealforms .ideal-file-upload:active:focus{color:#444;background:#eee;background:-webkit-linear-gradient(#fff, #ddd);background:-moz-linear-gradient(#fff, #ddd);background:-o-linear-gradient(#fff, #ddd);background:-ms-linear-gradient(#fff, #ddd);background:linear-gradient(#fff, #ddd);border:1px solid #aaa;border-bottom-color:#919191;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.15);-webkit-border-radius:3.01px;border-radius:3.01px;background:#ddd}
+form.idealforms .ideal-file-upload:focus{outline:none;border-color:#3f9dcc;-webkit-box-shadow:0 0 1px #3f9dcc;box-shadow:0 0 1px #3f9dcc}
 form.idealforms.adaptive .ideal-file-wrap{width:100%}
 form.idealforms.adaptive .ideal-file-filename{width:70%}
 form.idealforms.adaptive .ideal-file-upload{width:30%}
