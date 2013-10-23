@@ -26,7 +26,7 @@ Ideal Forms 3 is **not** compatible with version 2. You can still find Ideal For
 - Improved custom checkbox, radio and file inputs
 - Improved built-in theme
 - Switch to Stylus
-- Drop custom select menu
+- Drop custom select menu, but check out [jquery.idealselect](https://github.com/elclanrs/jquery.idealselect)
 - Drop support for IE8
 
 ### TODO
@@ -643,7 +643,7 @@ $('form').addFields({ 'field': { type: 'text', label: 'Field', appendToStep: 1 }
 
 ### Extension: Custom Inputs
 
-Adds custom checkboxes, radios and file inputs (yes!) seamlessly. The custom select menu has been dropped from Ideal Forms 3; it was proving to be a pain to maintain, and there are much better alternatives, such as [Select2](http://ivaynberg.github.io/select2/) if you need them.
+Adds custom checkboxes, radios and file inputs (yes!) seamlessly. The custom select menu has been dropped from Ideal Forms 3 but you can find a new simple replacement being maintained as [jquery.idealselect](https://github.com/elclanrs/jquery.idealselect).
 
 **Note:** File inputs must have an `id` as well as a `name` to work on IE.
 
