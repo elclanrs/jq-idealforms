@@ -17,7 +17,7 @@ module.exports = {
     return !isNaN(value);
   },
 
-  range: function(input, value, mix, max) {
+  range: function(input, value, min, max) {
     return Number(value) >= min && Number(value) <= max;
   },
 
