@@ -19,7 +19,9 @@
     validClass: 'valid',
     silentLoad: true,
     onValidate: $.noop,
-    onSubmit: $.noop
+    onSubmit: $.noop,
+    rules: {},
+    errors: {}
   };
 
   plugin.global = {

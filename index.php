@@ -231,10 +231,6 @@
           .show()
           .toggleClass('valid', ! invalid)
           .text(invalid ? (invalid +' invalid fields') : 'All good!');
-      },
-
-      steps: {
-        fadeSpeed: 300
       }
     });
 
