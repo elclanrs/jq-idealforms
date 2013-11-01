@@ -114,6 +114,7 @@ module.exports = {
             } else {
               self._handleError(input, userError);
             }
+			      self.opts.onValidate.call(self, input, 'ajax', resp);
 
             $field.removeClass('ajax');
 
