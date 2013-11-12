@@ -105,8 +105,11 @@ module.exports = {
     // @extend
     addFields: function(field) {
       var $steps = this.$stepsContainer.find(this.opts.steps.step);
+      if (! ('appendToStep' in field)) {
+        field.appendToStep = $steps.length-1;
+      }
       field.after = $steps
-        .eq(field.appendToStep || $steps.length-1)
+        .eq(field.appendToStep)
         .find('input, select, textarea')
         .last()[0].name;
     },
