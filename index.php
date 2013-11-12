@@ -234,8 +234,6 @@
       }
     });
 
-
-
     $('form.idealforms').find('input, select, textarea').on('change keyup', function() {
       $('#invalid').hide();
     });
