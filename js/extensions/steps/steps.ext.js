@@ -62,6 +62,38 @@ module.exports = {
       setTimeout(function(){ $(firstInvalid).focus() }, this.opts.steps.fadeSpeed);
     },
 
+    // @extend
+    addRules: function() {
+      this.firstStep();
+    },
+
+    // @extend
+    'addFields:before': function(field) {
+
+      if (field.after || field.before) return;
+
+      var $steps = this.$stepsContainer.find(this.opts.steps.step);
+
+      if (! ('appendToStep' in field)) {
+        field.appendToStep = $steps.length-1;
+      }
+
+      field.after = $steps
+        .eq(field.appendToStep)
+        .find('input, select, textarea')
+        .last()[0].name;
+    },
+
+    // @extend
+    toggleFields: function() {
+      this._updateSteps();
+    },
+
+    // @extend
+    removeFields: function() {
+      this._updateSteps();
+    },
+
     _buildSteps: function() {
 
       var self = this, options
@@ -95,38 +127,6 @@ module.exports = {
           $(this).find('span').text(invalid).toggleClass('zero', ! invalid);
         });
       });
-    },
-
-    // @extend
-    addRules: function() {
-      this.firstStep();
-    },
-
-    // @extend
-    addFields: function(field) {
-
-      if (field.after || field.before) return;
-
-      var $steps = this.$stepsContainer.find(this.opts.steps.step);
-
-      if (! ('appendToStep' in field)) {
-        field.appendToStep = $steps.length-1;
-      }
-
-      field.after = $steps
-        .eq(field.appendToStep)
-        .find('input, select, textarea')
-        .last()[0].name;
-    },
-
-    // @extend
-    toggleFields: function() {
-      this._updateSteps();
-    },
-
-    // @extend
-    removeFields: function() {
-      this._updateSteps();
     },
 
     goToStep: function(idx) {

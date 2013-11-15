@@ -20,7 +20,8 @@ module.exports = {
       this._buildCustomInputs();
     },
 
-    addFields: function() {
+    // @extend
+    'addFields:after': function() {
       this._buildCustomInputs();
     },
 

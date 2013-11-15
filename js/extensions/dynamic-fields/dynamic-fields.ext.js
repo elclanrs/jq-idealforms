@@ -78,7 +78,7 @@ module.exports = {
           field: template(self.opts.templates[field.type], field)
         });
 
-        self._inject('addFields', field);
+        self._inject('addFields:before', field);
 
         if (field.after || field.before) {
           self.$form.find('[name="'+ (field.after || field.before) +'"]').first().each(function() {
@@ -95,6 +95,8 @@ module.exports = {
           rules[name] = field.rules;
           self.addRules(rules);
         }
+
+        self._inject('addFields:after', field);
       });
 
     },
