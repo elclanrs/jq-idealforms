@@ -539,7 +539,7 @@ Show or hide fields. When the fields are hidden they will be excluded from the v
 $('form').idealforms('toggleFields', 'username password hobbies[]');
 ```
 
-Dynamic Fields adds injection points for `addFields`, `removeFields` and `toggleFields`. Read about [custom extensions](#custom-extensions) for more info.
+Dynamic Fields adds injection points for `addFields:before`, `addFields:after`, `removeFields` and `toggleFields`. Read about [custom extensions](#custom-extensions) for more info.
 
 ### Extension: Steps  
 
