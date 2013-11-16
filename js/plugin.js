@@ -58,7 +58,7 @@ module.exports = (function() {
             return;
           }
 
-;         if (Plugin.prototype[method.split(':')[0]]) {
+          if (Plugin.prototype[method.split(':')[0]]) {
             Plugin._extended[method] = Plugin._extended[method] || [];
             Plugin._extended[method].push({ name: extension.name, fn: fn });
           } else {
