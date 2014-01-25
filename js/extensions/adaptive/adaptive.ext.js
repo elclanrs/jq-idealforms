@@ -5,16 +5,16 @@ module.exports = {
 
   name: 'adaptive',
 
-  options: {
-    adaptiveWidth: $('<p class="idealforms-field-width"/>').appendTo('body').css('width').replace('px','')
-  },
-
   methods: {
 
     // @extend
     _init: function () {
 
       var self = this;
+
+      var $dummy = $('<p class="idealforms-field-width"/>').appendTo('body');
+
+      this.opts.adaptiveWidth = $dummy.css('width').replace('px','')
 
       function adapt() {
 
@@ -37,7 +37,7 @@ module.exports = {
         self._getField(this).find(self.opts.error).addClass('hidden');
       });
 
-      $('p.idealforms-field-width').remove();
+      $dummy.remove();
     }
 
   }
