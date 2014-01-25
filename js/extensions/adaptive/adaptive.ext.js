@@ -14,7 +14,7 @@ module.exports = {
 
       var $dummy = $('<p class="idealforms-field-width"/>').appendTo('body');
 
-      this.opts.adaptiveWidth = $dummy.css('width').replace('px','')
+      this.opts.adaptiveWidth = $dummy.css('width').replace('px','');
 
       function adapt() {
 
