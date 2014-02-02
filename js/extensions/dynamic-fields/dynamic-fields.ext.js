@@ -35,7 +35,7 @@ module.exports = {
 
       text: '<input name="{name}" type="{subtype}" value="{value}" {attrs}>',
 
-      file: '<input id="{name} "name="{name}" type="file" {attrs}>',
+      file: '<input id="{name}" name="{name}" type="file" {attrs}>',
 
       textarea: '<textarea name="{name}" {attrs}>{text}</textarea>',
 
