@@ -18,7 +18,7 @@ module.exports = {
           var self = this
             , $field = this._getField(input)
             , url = $(input).data('idealforms-ajax')
-            , userError = $.idealforms._getKey('errors.'+ input.name +'.ajaxError', self.opts)
+            , userError = $.idealforms._getKey('errors.'+ input.name +'.ajax_error', self.opts)
             , requests = $.idealforms._requests
             , data = {};
 
