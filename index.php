@@ -221,7 +221,7 @@
 
       errors: {
         'username': {
-          ajaxError: 'Username not available'
+          ajax_error: 'Username not available'
         }
       },
 

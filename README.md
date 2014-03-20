@@ -669,7 +669,7 @@ $('form').idealforms({
   errors: {
     'username': {
       ajax: 'Checking user availability...',
-      ajaxError: 'Username not available, try a different one.'
+      ajax_error: 'Username not available, try a different one.'
     }
   }
 });
