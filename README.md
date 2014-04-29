@@ -31,8 +31,7 @@ Ideal Forms 3 is **not** compatible with version 2. You can still find Ideal For
 
 ### TODO
 
-- [Poll](http://i.imgur.com/gZbZNMb.png): Image Preview Field
-- Bring back other languages to Ideal Forms 3
+- Image Preview Field
 
 ## Table of Contents
 
