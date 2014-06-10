@@ -52,7 +52,7 @@ module.exports = {
 
     if (name) $inputs = $inputs.filter('[name="'+ name +'"]');
 
-    $inputs.filter('input:not(:checkbox, :radio)').val('');
+    $inputs.filter('input:not(:checkbox, :radio), textarea').val('');
     $inputs.filter(':checkbox, :radio').prop('checked', false);
     $inputs.filter('select').find('option').prop('selected', function() {
       return this.defaultSelected;

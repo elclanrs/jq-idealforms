@@ -20,7 +20,7 @@ module.exports = {
     this.addRules(this.opts.rules || {});
 
     this.$form.submit(function(e) {
-      self._validateAll();
+      self._validateAll(true);
       self.focusFirstInvalid();
       self.opts.onSubmit.call(self, self.getInvalid().length, e);
     });
@@ -204,8 +204,8 @@ module.exports = {
     return valid;
   },
 
-  _validateAll: function() {
+  _validateAll: function(handleStyle, handleError) {
     var self = this;
-    this.$inputs.each(function(){ self._validate(this, true); });
+    this.$inputs.each(function(){ self._validate(this, handleStyle, handleError); });
   }
 };
