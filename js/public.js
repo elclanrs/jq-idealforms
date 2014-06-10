@@ -16,7 +16,7 @@ module.exports = {
     $inputs.each(function(){ self._buildField(this) });
     this.$inputs = this.$inputs.add($inputs);
 
-    this._validateAll();
+    this._validateAll(true);
     this.$fields.find(this.opts.error).hide();
 
     this._inject('addRules');
