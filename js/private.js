@@ -204,8 +204,8 @@ module.exports = {
     return valid;
   },
 
-  _validateAll: function(handleStyle, handleError) {
+  _validateAll: function(handleError, handleStyle) {
     var self = this;
-    this.$inputs.each(function(){ self._validate(this, handleStyle, handleError); });
+    this.$inputs.each(function(){ self._validate(this, handleError, handleStyle); });
   }
 };
