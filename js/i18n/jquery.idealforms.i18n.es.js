@@ -19,7 +19,7 @@ $.idealforms.i18n.es = {
     username: 'Debe contener entre 4 y 32 caracteres y empezar con una letra. Puedes usar letras, números, guiones, y un punto',
     pass: 'Debe contener al menos 6 caracteres y contener al menos un número, una letra mayúscula y una minúscula',
     strongpass: 'Debe contener al menos 8 caracteres y contener al menos una letra mayúscula, una letra minúscula, y un número o caracter especial',
-    phone: 'Debe ser un número te teléfono válido',
+    phone: 'Debe ser un número de teléfono válido',
     zip: 'Debe ser un código postal válido',
     url: 'Debe ser una dirección web válida',
     number: 'Debe ser un número',
