@@ -1,7 +1,7 @@
 /**
  * i18n PT-BR
  */
-$.idealforms.i18n.pt = {
+jQuery.idealforms.i18n.pt = {
 
   customInputs: {
     open: 'Abrir'

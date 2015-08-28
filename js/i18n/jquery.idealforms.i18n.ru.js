@@ -1,7 +1,7 @@
 /**
  * i18n RU
  */
-$.idealforms.i18n.ru = {
+jQuery.idealforms.i18n.ru = {
 
   customInputs: {
     open: 'Открыть'
