@@ -828,7 +828,7 @@ Creating your own locale file:
 /**
  * i18n ES
  */
-$.idealforms.i18n.es = {
+jQuery.idealforms.i18n.es = {
 
   customInputs: {
     open: 'Abrir'
